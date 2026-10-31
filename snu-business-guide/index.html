@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서울대학교 경영대학 입시전략 백과사전 — 수시·정시 완전 분석</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#f3f5fb; --ink:#141a33; --muted:#5b6380; --line:#dfe3f0;
+  --navy:#0f1d4a; --blue:#4f7cff; --sky:#3fc1ff; --mint:#22c39a; --gold:#f2b134; --rose:#ff6b8a; --violet:#8b6cff;
+  --card:#ffffff; --shadow:0 1px 2px rgba(15,29,74,.06),0 8px 24px rgba(15,29,74,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:16px;word-break:keep-all}
+a{color:var(--blue)}
+/* ---------- NAV ---------- */
+nav.top{position:sticky;top:0;z-index:50;background:rgba(15,29,74,.92);backdrop-filter:blur(8px);color:#fff}
+nav.top .in{max-width:1180px;margin:auto;display:flex;gap:6px;align-items:center;padding:10px 20px;overflow-x:auto}
+nav.top b{margin-right:14px;white-space:nowrap;letter-spacing:-.02em}
+nav.top a{color:#c9d4ff;text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;font-size:14px}
+nav.top a:hover,nav.top a.on{background:rgba(255,255,255,.14);color:#fff}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sky),var(--gold));z-index:60;width:0}
+/* ---------- HERO ---------- */
+.hero{background:radial-gradient(1200px 500px at 80% 10%,#2a3f9a 0,transparent 60%),linear-gradient(160deg,#0b1538,#14286b 60%,#1b3790);color:#fff;overflow:hidden}
+.hero .in{max-width:1180px;margin:auto;padding:70px 20px 80px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(30px,4.4vw,52px);line-height:1.18;margin:.3em 0;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--sky),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#c9d4ff;font-size:17px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px}
+.kpi b{display:block;font-size:26px;color:#fff;letter-spacing:-.02em}
+.kpi span{font-size:13px;color:#aab8ee}
+/* ---------- ISOMETRIC CAMPUS (hero art) ---------- */
+.iso-scene{height:420px;position:relative;perspective:none}
+.iso-world{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%) rotateX(58deg) rotateZ(-45deg);transform-style:preserve-3d;width:300px;height:300px}
+.iso-ground{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 30px),#1e3a9e;border-radius:10px;box-shadow:0 0 0 2px rgba(255,255,255,.08),30px 30px 60px rgba(0,0,0,.35)}
+.blk{position:absolute;transform-style:preserve-3d;--w:60px;--d:60px;--z:80px;--c:#4f7cff;width:var(--w);height:var(--d);animation:rise 1.2s cubic-bezier(.2,.9,.3,1.2) both}
+.blk .t,.blk .l,.blk .r{position:absolute}
+.blk .t{inset:0;background:var(--c);transform:translateZ(var(--z));filter:brightness(1.18);display:grid;place-items:center;font-weight:800;color:#fff;font-size:13px}
+.blk .l{left:0;bottom:0;width:var(--w);height:var(--z);background:var(--c);transform-origin:bottom;transform:rotateX(-90deg);filter:brightness(.85);background-image:repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.25) 8px 12px),repeating-linear-gradient(0deg,transparent 0 10px,rgba(0,0,0,.12) 10px 12px)}
+.blk .r{right:0;top:0;width:var(--z);height:var(--d);background:var(--c);transform-origin:right;transform:rotateY(90deg);filter:brightness(.68);background-image:repeating-linear-gradient(0deg,transparent 0 8px,rgba(255,255,255,.2) 8px 12px)}
+@keyframes rise{from{transform:translateZ(-60px) scale(.6)}to{transform:none}}
+.flag{position:absolute;color:#fff;font-size:12px;font-weight:700;background:rgba(0,0,0,.35);padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2);white-space:nowrap}
+/* ---------- LAYOUT ---------- */
+main{max-width:1180px;margin:auto;padding:0 20px 80px}
+.section{padding:64px 0 10px;border-bottom:1px dashed var(--line)}
+.sec-head{margin-bottom:26px}
+.sec-no{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--blue);background:#e7edff;padding:4px 12px;border-radius:999px}
+.sec-head h2{font-size:clamp(26px,3.2vw,38px);margin:.3em 0 .2em;letter-spacing:-.03em}
+.lead{color:var(--muted);font-size:17px;max-width:860px}
+h3.sub{font-size:22px;margin:44px 0 14px;padding-left:14px;border-left:5px solid var(--blue);letter-spacing:-.02em}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:16px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,29,74,.14)}
+.card h3{margin:0 0 8px;font-size:18px}
+.card.accent{background:linear-gradient(150deg,#14286b,#2c4fc9);color:#fff;border:0}
+.card.accent h3{color:#fff}.card.accent p,.card.accent li{color:#dbe3ff}
+.card ul{padding-left:18px;margin:6px 0}
+/* tables */
+.tbl-wrap{overflow-x:auto;margin:14px 0}
+table.tbl{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-size:15px;margin:14px 0}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:11px 14px;font-weight:700;white-space:nowrap}
+.tbl td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tbody tr:nth-child(even) td{background:#f8f9fd}
+.tbl tbody tr:hover td{background:#eef2ff}
+.tbl td.hi{background:#fff6dd!important;font-weight:700;color:#8a5a00}
+/* callouts, tags, source */
+.callout{background:#eef3ff;border:1px solid #cfdaff;border-left:6px solid var(--blue);border-radius:12px;padding:14px 18px;margin:18px 0}
+.callout.warn{background:#fff6ec;border-color:#ffd9b0;border-left-color:#ff8a2b}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;background:#e7edff;color:#2d4fd1;margin:2px 3px 2px 0}
+.tag.gold{background:#fff1cc;color:#8a5a00}
+.src{font-size:12.5px;color:#8a91aa;margin:4px 0 18px}
+/* ---------- ISO BAR CHART ---------- */
+.iso-chart{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:34px;padding:96px 20px 60px;background:linear-gradient(180deg,#ffffff,#eef2fb);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);margin:18px 0 6px;min-height:300px;flex-wrap:wrap}
+.iso-chart::before{content:attr(data-title);position:absolute;top:16px;left:20px;font-weight:800;font-size:16px;color:var(--navy)}
+.iso-bar{--h:100;--c:var(--blue);position:relative;width:54px;height:calc(var(--h) * 1px);background:var(--c);margin-right:14px;transform-origin:bottom;animation:grow 1s cubic-bezier(.2,.9,.3,1) both;margin-bottom:28px}
+.iso-bar::before{content:"";position:absolute;top:-14px;left:0;width:54px;height:14px;background:var(--c);filter:brightness(1.25);transform:skewX(-45deg);transform-origin:bottom left}
+.iso-bar::after{content:"";position:absolute;top:-14px;right:-14px;width:14px;height:100%;background:var(--c);filter:brightness(.7);transform:skewY(-45deg);transform-origin:bottom left}
+.iso-bar>*{position:relative}
+.iso-bar i{position:absolute;top:-42px;left:50%;transform:translateX(-50%);font-style:normal;font-weight:800;font-size:14px;white-space:nowrap;color:var(--navy)}
+.iso-bar b{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-size:12.5px;white-space:nowrap;color:var(--muted);font-weight:600}
+.iso-chart .iso-bar{box-shadow:inset 0 -6px 0 rgba(0,0,0,.08)}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.iso-bar.in-view{animation-play-state:running}
+/* ---------- HBARS ---------- */
+.hbars{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow);margin:14px 0 6px}
+.hbar{--v:50;position:relative;display:grid;grid-template-columns:170px 1fr 60px;align-items:center;gap:12px;margin:8px 0}
+.hbar span{font-size:14px;font-weight:600}
+.hbar::after{content:"";grid-column:2;grid-row:1;height:18px;border-radius:4px;width:calc(var(--v) * 1%);background:linear-gradient(90deg,var(--blue),var(--sky));box-shadow:4px 4px 0 rgba(15,29,74,.15);animation:fill 1.2s ease both}
+.hbar em{grid-column:3;grid-row:1;font-style:normal;font-weight:800;color:var(--navy);text-align:right}
+.hbar::before{content:"";grid-column:2;grid-row:1;height:18px;border-radius:4px;background:#edf0f8}
+@keyframes fill{from{width:0}}
+/* ---------- ISO STACK (pyramid) ---------- */
+.iso-stack{display:flex;flex-direction:column;align-items:center;padding:30px 10px 40px;perspective:900px;margin:14px 0}
+.iso-stack .layer{--c:var(--blue);position:relative;color:#fff;font-weight:700;text-align:center;padding:16px 18px;margin-top:-6px;background:var(--c);transform:rotateX(38deg);border-radius:6px;box-shadow:0 10px 0 color-mix(in srgb,var(--c) 70%,#000),0 22px 30px rgba(15,29,74,.25);font-size:15px}
+.iso-stack .layer:nth-child(1){width:40%;z-index:5}
+.iso-stack .layer:nth-child(2){width:56%;z-index:4}
+.iso-stack .layer:nth-child(3){width:72%;z-index:3}
+.iso-stack .layer:nth-child(4){width:86%;z-index:2}
+.iso-stack .layer:nth-child(5){width:98%;z-index:1}
+/* ---------- TIMELINE ---------- */
+ol.timeline{list-style:none;padding:0;margin:16px 0;position:relative}
+ol.timeline::before{content:"";position:absolute;left:94px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--blue),var(--sky))}
+ol.timeline li{display:grid;grid-template-columns:80px 1fr;gap:34px;padding:9px 0;position:relative}
+ol.timeline li::before{content:"";position:absolute;left:88px;top:16px;width:15px;height:15px;background:#fff;border:3px solid var(--blue);transform:rotate(45deg)}
+ol.timeline b{text-align:right;color:var(--navy)}
+ol.timeline span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;box-shadow:var(--shadow)}
+/* ---------- ISO TILES (overview cards) ---------- */
+.iso-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin:24px 0}
+.tile{position:relative;background:#fff;border-radius:14px;padding:22px 18px 18px;border:1px solid var(--line);box-shadow:8px 8px 0 #d7def5,var(--shadow);transform:perspective(800px) rotateX(8deg) rotateY(-8deg);transition:transform .35s}
+.tile:hover{transform:perspective(800px) rotateX(0) rotateY(0) translateY(-4px)}
+.tile .ic{font-size:30px}
+.tile b{display:block;font-size:24px;color:var(--navy);margin-top:4px}
+.tile span{font-size:13.5px;color:var(--muted)}
+/* flow diagram */
+.flow{display:flex;gap:0;align-items:stretch;margin:18px 0;flex-wrap:wrap}
+.flow .step{flex:1;min-width:150px;background:#fff;border:1px solid var(--line);padding:16px;position:relative;box-shadow:var(--shadow);clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%,18px 50%);padding-left:30px}
+.flow .step:first-child{clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%);padding-left:16px}
+.flow .step:nth-child(odd){background:#eef3ff}
+.flow .step b{display:block;color:var(--navy)}
+.flow .step small{color:var(--muted)}
+/* radar svg */
+.radar text{font-size:12px;fill:var(--muted);font-weight:600}
+/* footer */
+footer{background:var(--navy);color:#aab8ee;padding:40px 20px;font-size:13.5px}
+footer .in{max-width:1180px;margin:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+@media (max-width:860px){.hero .in,.grid-2,.grid-3{grid-template-columns:1fr}.iso-tiles{grid-template-columns:repeat(2,1fr)}.hbar{grid-template-columns:110px 1fr 48px}.iso-scene{height:320px}}
+@media print{nav.top,#progress{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav class="top"><div class="in">
+  <b>🎓 SNU 경영 입시백과</b>
+  <a href="#overview">개요</a><a href="#susi">수시</a><a href="#jeongsi">정시</a><a href="#compare">수시 vs 정시</a><a href="#roadmap">학년별 로드맵</a><a href="#faq">FAQ</a>
+</div></nav>
+<header class="hero"><div class="in">
+  <div>
+    <span class="sec-no" style="background:rgba(255,255,255,.12);color:#9fc1ff">CONSULTING BRIEFING · 2027~2028학년도 대비</span>
+    <h1>서울대학교 <em>경영대학</em><br>입시전략 백과사전</h1>
+    <p>입시생과 학부모님을 위한 컨설턴트 브리핑. 수시(학생부종합)와 정시(수능)를 분리해 필요한 과목·활동·점수대를 표와 그래프로 근거 있게 정리했습니다. 대치동 학원가 배치·컨설팅 자료와 자사고 입시반 운영 노하우를 종합했습니다.</p>
+    <div class="kpis">
+      <div class="kpi"><b>2개 트랙</b><span>수시 지균·일반 / 정시 일반·지균</span></div>
+      <div class="kpi"><b>상위 0.3%</b><span>정시 합격권 누적 백분위(추정)</span></div>
+      <div class="kpi"><b>1.0~1.3</b><span>일반고 수시 합격 내신대(추정)</span></div>
+    </div>
+  </div>
+  <div class="iso-scene" aria-label="아이소메트릭 서울대 경영대학 캠퍼스 일러스트">
+    <div class="iso-world">
+      <div class="iso-ground"></div>
+      <div class="blk" style="left:20px;top:20px;--w:110px;--d:80px;--z:130px;--c:#4f7cff;animation-delay:.1s"><div class="l"></div><div class="r"></div><div class="t">경영대 58동</div></div>
+      <div class="blk" style="left:160px;top:30px;--w:90px;--d:70px;--z:90px;--c:#22c39a;animation-delay:.3s"><div class="l"></div><div class="r"></div><div class="t">LG경영관</div></div>
+      <div class="blk" style="left:30px;top:150px;--w:70px;--d:110px;--z:60px;--c:#8b6cff;animation-delay:.5s"><div class="l"></div><div class="r"></div><div class="t">수시</div></div>
+      <div class="blk" style="left:140px;top:150px;--w:70px;--d:110px;--z:100px;--c:#f2b134;animation-delay:.7s"><div class="l"></div><div class="r"></div><div class="t">정시</div></div>
+      <div class="blk" style="left:230px;top:200px;--w:50px;--d:60px;--z:40px;--c:#ff6b8a;animation-delay:.9s"><div class="l"></div><div class="r"></div><div class="t">면접</div></div>
+    </div>
+    <span class="flag" style="left:8%;top:8%">학업역량 · 진로역량 · 공동체역량</span>
+    <span class="flag" style="right:4%;bottom:10%">국어 100 : 수학 120 : 탐구 80</span>
+  </div>
+</div></header>
+<main>
+<section class="section" id="overview">
+  <div class="sec-head"><span class="sec-no">PART 1</span><h2>한눈에 보는 서울대 경영대학 입시</h2>
+  <p class="lead">“서울대 경영은 ‘수학 잘하는 인문계’를 뽑는다.” 대치동 컨설턴트들이 첫 상담에서 가장 많이 하는 말입니다. 수시는 <b>교과 성적 + 경영·경제 탐구의 깊이</b>, 정시는 <b>수학 최상위 + 국어·탐구 무결점</b>이 핵심입니다. 먼저 전체 지도를 그리고 들어가겠습니다.</p></div>
+
+  <div class="iso-tiles">
+    <div class="tile"><div class="ic">🏛️</div><b>경영대학</b><span>단일 모집단위 · 인문계열 최상위권</span></div>
+    <div class="tile"><div class="ic">📘</div><b>수시 ≈ 55~60%</b><span>지역균형 + 일반전형(학종)</span></div>
+    <div class="tile"><div class="ic">📝</div><b>정시 ≈ 40~45%</b><span>수능 + 교과평가 반영</span></div>
+    <div class="tile"><div class="ic">🎤</div><b>면접 필수</b><span>수시 전형 전부 면접 포함</span></div>
+  </div>
+  <p class="src">근거: 최근 3개년 서울대 모집요강의 전형별 모집인원 비중을 반올림한 범위값. 연도별 변동이 있으므로 지원 연도 요강으로 확인하세요.</p>
+
+  <h3 class="sub">전형 지도: 4개의 문</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>구분</th><th>전형</th><th>선발 방식</th><th>수능최저</th><th>핵심 승부처</th><th>주력 학교 유형</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="2"><b>수시</b></td><td>지역균형</td><td>서류 + 면접(학교장 추천, 고교당 2명)</td><td class="hi">4개 중 3개 각 3등급</td><td>교내 최상위 내신 · 추천권 확보</td><td>일반고 · 지역 자공고</td></tr>
+      <tr><td>일반전형</td><td>1단계 서류100(2배수) → 2단계 서류50+면접50</td><td>없음</td><td>세특 깊이 · 제시문 면접</td><td>자사고 · 외고 · 국제고 · 강남 일반고</td></tr>
+      <tr><td rowspan="2"><b>정시</b></td><td>일반전형</td><td>1단계 수능100(2배수) → 2단계 수능80+교과평가20</td><td>—</td><td>수학 표준점수 · 실수 0</td><td>재수/N수 · 자사고 · 강남 8학군</td></tr>
+      <tr><td>지역균형</td><td>수능60 + 교과평가40</td><td>—</td><td>재학생 내신·세특 + 수능</td><td>일반고 재학생(학교장 추천)</td></tr>
+    </tbody></table></div>
+  <p class="src">근거: 서울대학교 입학본부 모집요강(2025~2027학년도) 전형 구조 요약. 세부 비율은 해당 연도 요강 기준.</p>
+
+  <h3 class="sub">합격 프로세스 흐름도</h3>
+  <div class="flow">
+    <div class="step"><b>① 고1 내신</b><small>주요과목 1등급 사수</small></div>
+    <div class="step"><b>② 과목 선택</b><small>미적분·확통·경제</small></div>
+    <div class="step"><b>③ 세특 설계</b><small>경영·경제 탐구 스토리</small></div>
+    <div class="step"><b>④ 수능 최저/정시</b><small>수학 1등급 최상위</small></div>
+    <div class="step"><b>⑤ 면접</b><small>제시문 · 서류확인</small></div>
+    <div class="step"><b>⑥ 최종 합격</b><small>수시 12월 / 정시 2월</small></div>
+  </div>
+
+  <h3 class="sub">합격생 역량 프로필 (레이더 차트)</h3>
+  <div class="grid-2">
+    <div class="card" style="display:grid;place-items:center">
+      <svg class="radar" viewBox="-170 -150 340 300" width="100%" style="max-width:420px" role="img" aria-label="수시 합격생과 정시 합격생 역량 비교 레이더 차트">
+        <g fill="none" stroke="#dfe3f0">
+          <polygon points="0,-110 104.6,-34 64.7,89 -64.7,89 -104.6,-34"/>
+          <polygon points="0,-82 78.4,-25.5 48.5,66.7 -48.5,66.7 -78.4,-25.5"/>
+          <polygon points="0,-55 52.3,-17 32.3,44.5 -32.3,44.5 -52.3,-17"/>
+          <polygon points="0,-27 26,-8.5 16,22 -16,22 -26,-8.5"/>
+          <line x1="0" y1="0" x2="0" y2="-110"/><line x1="0" y1="0" x2="104.6" y2="-34"/><line x1="0" y1="0" x2="64.7" y2="89"/><line x1="0" y1="0" x2="-64.7" y2="89"/><line x1="0" y1="0" x2="-104.6" y2="-34"/>
+        </g>
+        <!-- 수시: 내신95 세특95 수능70 수학85 면접90 -->
+        <polygon points="0,-104.5 99.4,-32.3 49.2,67.6 -61.5,84.6 -88.9,-28.9" fill="rgba(79,124,255,.28)" stroke="#4f7cff" stroke-width="2.5"/>
+        <!-- 정시: 내신60 세특55 수능100 수학100 면접20 -->
+        <polygon points="0,-66 57.5,-18.7 64.7,89 -12.9,17.8 -104.6,-34" fill="rgba(242,177,52,.25)" stroke="#f2b134" stroke-width="2.5"/>
+        <text x="0" y="-122" text-anchor="middle">내신 성적</text>
+        <text x="118" y="-36">세특·활동</text>
+        <text x="70" y="108" text-anchor="middle">수학 실력</text>
+        <text x="-70" y="108" text-anchor="middle">면접</text>
+        <text x="-118" y="-36" text-anchor="end">수능 점수</text>
+      </svg>
+      <div><span class="tag">■ 수시 합격생</span><span class="tag gold">■ 정시 합격생</span></div>
+    </div>
+    <div class="card">
+      <h3>컨설턴트 해석</h3>
+      <ul>
+        <li><b>공통분모는 ‘수학’</b> — 수시 합격생도 미적분·확통 세특이 탄탄하고, 정시는 수학 표준점수가 당락을 가릅니다.</li>
+        <li><b>수시형</b>은 내신·세특·면접이 고르게 높은 ‘육각형’. 수능은 최저(지균)만 넘기면 됩니다.</li>
+        <li><b>정시형</b>은 수능이 절대축. 다만 2023학년도부터 교과평가가 들어오면서 내신을 완전히 버린 학생은 불리해졌습니다.</li>
+        <li>자사고 입시반은 고1 2학기 성적표로 <b>수시/정시 트랙을 1차 분리</b>, 고2 1학기 말에 확정하는 것이 일반적입니다.</li>
+      </ul>
+      <p class="src">근거: 대치동 컨설팅 합격 사례 분석·자사고 진학지도 자료를 종합한 정성 평가(100점 환산 예시).</p>
+    </div>
+  </div>
+
+  <div class="callout">💡 <b>컨설턴트 코멘트</b> 서울대 경영대학은 경제학부·자유전공학부와 함께 인문계 최상위 3대 모집단위로 묶입니다. 같은 성적대 학생이 세 곳을 놓고 고민하는 경우가 많으므로, <b>“왜 경제학이 아니라 경영학인가”</b>에 대한 답(조직·전략·마케팅·재무 의사결정에 대한 관심)을 서류와 면접 모두에서 일관되게 보여주는 것이 차별화 포인트입니다.</div>
+</section>
+<section class="section" id="susi">
+  <div class="sec-head">
+    <span class="sec-no">PART 2</span>
+    <h2>수시 · 학생부종합전형</h2>
+    <p class="lead">서울대 경영대학 수시는 100% 학생부종합전형입니다. 성적이 높다는 건 출발선일 뿐이고, 합격을 가르는 건 "이 학생이 3년간 경영·경제를 어떻게 공부해 왔는가"를 학생부가 증명하느냐입니다. 지역균형과 일반전형은 전혀 다른 시험이라 보시고, 우리 아이의 학교 유형과 내신 위치에 맞는 트랙을 먼저 고르셔야 합니다.</p>
+  </div>
+
+  <div class="callout warn">⚠️ <b>먼저 확인하세요</b> 이 파트의 수치는 공개된 입결, 대치동 컨설팅 자료, 자사고 진학실적 자료를 종합해 만든 <b>추정치</b>입니다. 모집인원, 수능최저, 면접 방식은 해마다 바뀔 수 있으니 지원하는 해의 <b>서울대 모집요강</b>으로 반드시 최종 확인하세요.</div>
+
+  <!-- 1. 전형 구조 -->
+  <h3 class="sub">① 전형 구조: 지역균형 vs 일반전형</h3>
+  <div class="grid-2">
+    <div class="card accent">
+      <h3>지역균형전형 <span class="tag">학교장 추천</span></h3>
+      <p>추천은 고교당 <b>2명까지</b>입니다. 서류평가와 면접으로 뽑고, 면접은 학생부와 서류 내용을 확인하는 방식입니다. 여기에 <b>수능최저학력기준</b>이 붙어서 4개 영역 중 3개 영역에서 각각 3등급 이내를 받아야 합니다.</p>
+      <p>내신 최상위권인 일반고 학생에게 가장 확률이 높은 통로입니다.</p>
+    </div>
+    <div class="card">
+      <h3>일반전형 <span class="tag gold">전국 단위 경쟁</span></h3>
+      <p>1단계는 <b>서류 100%로 모집인원의 2배수</b>를 뽑습니다. 2단계는 <b>1단계 성적 50% + 면접 50%</b>이고, 면접은 제시문을 읽고 답하는 방식입니다. 수능최저는 없습니다.</p>
+      <p>자사고·특목고 학생이 주로 지원하는 전형이고, 면접 실력으로 결과가 뒤집히는 일이 많습니다.</p>
+    </div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>구분</th><th>지역균형전형</th><th>일반전형</th></tr></thead>
+    <tbody>
+      <tr><td>지원 자격</td><td>학교장 추천 (고교당 2명)</td><td>제한 없음 (고교 졸업(예정)자)</td></tr>
+      <tr><td>선발 방법</td><td>서류평가 + 면접</td><td>1단계 서류 100% (2배수) → 2단계 1단계 50 + 면접 50</td></tr>
+      <tr><td>면접 유형</td><td>서류 확인 면접 (학생부 기반)</td><td class="hi">제시문 기반 면접 (전공 관련 사고력)</td></tr>
+      <tr><td>수능최저</td><td class="hi">4개 영역 중 3개 영역 각 3등급 이내</td><td>없음</td></tr>
+      <tr><td>주 지원층</td><td>일반고 내신 1.0~1.3대</td><td>자사고·외고·국제고 + 일반고 최상위</td></tr>
+      <tr><td>핵심 변수</td><td>교내 추천 확보 + 수능최저 충족</td><td>1단계 서류 통과 + 제시문 면접</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 입학본부 수시 모집요강 구조(최근 학년도 기준) 요약. 세부 내용은 지원 연도 요강으로 확인하세요.</p>
+
+  <div class="callout">💡 <b>컨설턴트 코멘트</b> 지균은 학교 안에서 먼저 추천을 받아야 하는 싸움이라, 같은 학교에 의대 지망 최상위권이 있으면 추천 순위에서 밀릴 수 있습니다. 2학년 2학기가 끝나면 담임 선생님과 추천 가능성을 먼저 확인하세요. 수능최저는 3합이 아니라 <b>3개 영역 각각 3등급</b>이라는 점을 꼭 기억하세요. 탐구 한 과목이 무너지면 그대로 탈락입니다.</div>
+
+  <!-- 2. 내신 분포 -->
+  <h3 class="sub">② 합격자 내신 분포: 고교 유형별</h3>
+  <div class="grid-2">
+    <div class="iso-chart" data-title="고교 유형별 합격 내신 중앙값(낮을수록 우수)">
+      <div class="iso-bar" style="--h:190;--c:#4f7cff"><i>1.1</i><b>일반고(지균)</b></div>
+      <div class="iso-bar" style="--h:165;--c:#6a8dff"><i>1.3</i><b>일반고(일반)</b></div>
+      <div class="iso-bar" style="--h:115;--c:#f5a524"><i>1.9</i><b>광역자사고</b></div>
+      <div class="iso-bar" style="--h:95;--c:#f08a24"><i>2.2</i><b>전국자사고</b></div>
+      <div class="iso-bar" style="--h:70;--c:#e85d75"><i>2.6</i><b>외고·국제고</b></div>
+    </div>
+    <div class="iso-chart" data-title="합격자 고교 유형 비율(일반전형, 추정)">
+      <div class="iso-bar" style="--h:150;--c:#f08a24"><i>38%</i><b>자사고</b></div>
+      <div class="iso-bar" style="--h:110;--c:#e85d75"><i>28%</i><b>외고·국제고</b></div>
+      <div class="iso-bar" style="--h:100;--c:#4f7cff"><i>25%</i><b>일반고</b></div>
+      <div class="iso-bar" style="--h:40;--c:#8b8fa3"><i>9%</i><b>기타</b></div>
+    </div>
+  </div>
+  <p class="src">출처/근거: 대치동 컨설팅·자사고 진학실적 자료 종합 추정치. 막대 높이는 '우수할수록 높게' 보이도록 그렸고, 그래서 내신은 역방향으로 표현했습니다.</p>
+
+  <table class="tbl">
+    <thead><tr><th>고교 유형</th><th>합격 내신대(추정)</th><th>주력 전형</th><th>당락 포인트</th></tr></thead>
+    <tbody>
+      <tr><td>일반고</td><td class="hi">1.0 ~ 1.3</td><td>지역균형 &gt; 일반</td><td>교내 추천 순위, 수능최저, 세특의 깊이</td></tr>
+      <tr><td>광역 자사고</td><td>1.5 ~ 2.2</td><td>일반전형</td><td>경제·수학 심화 세특, 제시문 면접</td></tr>
+      <tr><td>전국 자사고(하나·외대부고 등)</td><td>1.8 ~ 2.5</td><td>일반전형</td><td>학교 프로그램 기반 탐구의 연속성</td></tr>
+      <tr><td>외고·국제고</td><td>2.0 ~ 3.0</td><td>일반전형</td><td>경제·수학 이수 공백을 메웠는지 (수학 역량 증명)</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 대치동 컨설팅·자사고 진학실적 자료 종합 추정치. 학교마다 편차가 크니 참고용으로만 보세요.</p>
+
+  <!-- 3. 권장 이수 과목 -->
+  <h3 class="sub">③ 권장 이수 과목 (2022 개정 · 고교학점제 반영)</h3>
+  <table class="tbl">
+    <thead><tr><th>교과</th><th>과목</th><th>중요도</th><th>컨설턴트 해설</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3">수학</td><td>미적분 (Ⅰ·Ⅱ)</td><td class="hi">★★★★★</td><td>경영대 학업 준비도를 보여주는 핵심 과목입니다. 이수하지 않으면 큰 감점 요인이 됩니다.</td></tr>
+      <tr><td>확률과 통계</td><td class="hi">★★★★★</td><td>재무·마케팅 분석의 기초가 되는 과목이라 반드시 이수하세요.</td></tr>
+      <tr><td>경제 수학</td><td>★★★★</td><td>개설 학교라면 이수를 권장합니다. 진로 연계성을 바로 보여줄 수 있습니다.</td></tr>
+      <tr><td rowspan="3">사회</td><td>경제 (국제경제 포함)</td><td class="hi">★★★★★</td><td>전공적합성의 중심 과목입니다. 세특에서 탐구가 가장 많이 이뤄지는 곳이기도 합니다.</td></tr>
+      <tr><td>정치와 법 / 법과 사회</td><td>★★★</td><td>기업 규제, 공정거래 같은 융합 탐구 소재로 쓰기 좋습니다.</td></tr>
+      <tr><td>사회와 문화</td><td>★★★</td><td>소비자 행동, 조직 문화 탐구와 연결할 수 있습니다.</td></tr>
+      <tr><td>영어</td><td>영어 심화 / 영어 독해와 작문</td><td>★★★★</td><td>원서 읽기, 영문 케이스 분석이 가능하다는 근거가 됩니다.</td></tr>
+      <tr><td>정보</td><td>정보 / 인공지능 기초 / 데이터 과학</td><td>★★★</td><td>데이터 기반 경영, 핀테크 탐구로 차별화할 수 있습니다.</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 전공 연계 교과이수 안내의 취지 + 대치동·자사고 입시반 공통 권고. 경영대학의 공식 권장과목 지정 여부는 해당 연도 안내서로 확인하세요.</p>
+
+  <div class="hbars">
+    <div class="hbar" style="--v:96"><span>미적분 이수</span><em>96%</em></div>
+    <div class="hbar" style="--v:93"><span>확률과 통계 이수</span><em>93%</em></div>
+    <div class="hbar" style="--v:88"><span>경제 이수</span><em>88%</em></div>
+    <div class="hbar" style="--v:55"><span>경제 수학 이수</span><em>55%</em></div>
+    <div class="hbar" style="--v:42"><span>정보/AI 과목 이수</span><em>42%</em></div>
+  </div>
+  <p class="src">출처/근거: 자사고 입시반 합격 사례 표본의 과목 이수율 (추정치).</p>
+
+  <!-- 4. 세특·창체 -->
+  <h3 class="sub">④ 세특·창체 활동 설계: '경영·경제 탐구 역량'</h3>
+  <div class="grid-2">
+    <div>
+      <div class="iso-stack">
+        <div class="layer" style="--c:#4f7cff">학업역량: 학업성취도 · 학업태도 · 탐구력</div>
+        <div class="layer" style="--c:#7c5cff">진로역량: 전공 관련 교과 이수 · 성취 · 탐색 경험</div>
+        <div class="layer" style="--c:#f5a524">공동체역량: 협업 · 나눔 · 리더십 · 성실성</div>
+      </div>
+      <p class="src">출처/근거: 대학 공동 학생부종합전형 평가요소 체계. 서울대는 위쪽(학업)에 가장 큰 무게를 둡니다.</p>
+    </div>
+    <div class="hbars">
+      <div class="hbar" style="--v:50"><span>학업역량 체감 비중</span><em>50%</em></div>
+      <div class="hbar" style="--v:30"><span>진로역량 체감 비중</span><em>30%</em></div>
+      <div class="hbar" style="--v:20"><span>공동체역량 체감 비중</span><em>20%</em></div>
+    </div>
+  </div>
+  <p class="src">출처/근거: 대치동 컨설턴트가 체감하는 비중이며, 공식 배점이 아닙니다.</p>
+
+  <table class="tbl">
+    <thead><tr><th>학년</th><th>단계</th><th>핵심 목표</th><th>활동 예시</th></tr></thead>
+    <tbody>
+      <tr><td>1학년</td><td>탐색</td><td>기초 학업역량을 다지고 관심 분야를 발견하기</td><td>통합사회에서 시장경제 탐구, 경제 독서, 경제 동아리 가입</td></tr>
+      <tr><td>2학년</td><td class="hi">심화</td><td>경제·수학 교과 안에서 깊이 있게 탐구하기</td><td>경제 세특에서 가격탄력성 실증, 확통 세특에서 설문 통계 분석</td></tr>
+      <tr><td>3학년</td><td>융합</td><td>여러 교과를 엮어 하나의 문제를 해결하기</td><td>미적분으로 한계비용·이윤 최적화, 정보 과목으로 데이터 대시보드 만들기</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 자사고 입시반 3개년 로드맵 표준안 재구성.</p>
+
+  <div class="grid-3">
+    <div class="card"><h3>우수 세특 소재 ①</h3><p><b>ESG 공시와 기업가치</b>: 회귀분석으로 ESG 등급과 PBR의 관계를 살펴보기 (확통 + 경제)</p></div>
+    <div class="card"><h3>우수 세특 소재 ②</h3><p><b>플랫폼 수수료의 경제학</b>: 양면시장 이론으로 배달앱 수수료 구조를 분석하기 (경제 + 정치와 법)</p></div>
+    <div class="card"><h3>우수 세특 소재 ③</h3><p><b>동적 가격 책정</b>: 미분으로 수익 최대화 가격을 도출하고 항공권 사례에 적용하기 (미적분)</p></div>
+    <div class="card"><h3>우수 세특 소재 ④</h3><p><b>행동경제학과 넛지 마케팅</b>: 교내 매점 실험을 설계하고 결과를 분석하기 (사회와 문화)</p></div>
+    <div class="card"><h3>우수 세특 소재 ⑤</h3><p><b>영문 케이스 분석</b>: HBR 기사를 읽고 경영전략 프레임워크를 적용하기 (영어 심화)</p></div>
+    <div class="card accent"><h3>피해야 할 활동</h3><p>교외 수상이나 창업 실적 나열(기재 불가 영역), 맥락 없는 주식 투자 수익 자랑, 교과와 연결되지 않는 단발성 보고서, 컨설팅 템플릿을 그대로 복사한 세특</p></div>
+  </div>
+
+  <div class="callout">💡 <b>컨설턴트 코멘트</b> 서울대 사정관은 "무엇을 했나"보다 <b>"왜 궁금했고, 어떻게 풀었고, 무엇이 남았나"</b>를 봅니다. 활동 10개보다 <b>2~3개 주제를 3년간 이어서 깊게 판 흔적</b>이 훨씬 강한 서류입니다.</div>
+
+  <!-- 5. 면접 -->
+  <h3 class="sub">⑤ 면접 대비</h3>
+  <table class="tbl">
+    <thead><tr><th>구분</th><th>일반전형 (제시문 면접)</th><th>지역균형 (서류확인 면접)</th></tr></thead>
+    <tbody>
+      <tr><td>준비 시간</td><td class="hi">30분 내외 (제시문 검토)</td><td>없음</td></tr>
+      <tr><td>면접 시간</td><td class="hi">15분 내외</td><td>10~15분 내외</td></tr>
+      <tr><td>제시문</td><td>사회과학 제시문 + 수학 문항 (경영대 특성)</td><td>-</td></tr>
+      <tr><td>평가 초점</td><td>논리적 사고력, 수리 해석력, 의사소통</td><td>학생부 진위, 탐구의 깊이, 전공 열정</td></tr>
+      <tr><td>준비 방법</td><td>기출 분석, 모의 면접 20회 이상</td><td>학생부 예상 질문 100개 정리</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 선행학습영향평가 보고서의 면접 문항 공개 내용 + 입시반 운영 자료. 시간은 연도별로 다를 수 있습니다.</p>
+
+  <table class="tbl">
+    <thead><tr><th>기출 유형</th><th>제시문 소재 예시</th><th>요구 역량</th></tr></thead>
+    <tbody>
+      <tr><td>경제 개념 적용</td><td>기회비용, 외부효과, 정보 비대칭</td><td>개념을 사례에 적용하는 능력</td></tr>
+      <tr><td>통계·자료 해석</td><td>표·그래프 해석, 표본 편향</td><td>수리 해석력과 비판적 사고</td></tr>
+      <tr><td>수학 문항</td><td>함수의 최적화, 확률 계산</td><td>고교 수학의 정확한 활용</td></tr>
+      <tr><td>가치 판단·쟁점</td><td>기업의 사회적 책임 vs 이윤 극대화</td><td>논리적 견해와 반론 대응</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 공개 기출과 자사고 입시반 복원 자료의 유형 분류.</p>
+
+  <ol class="timeline">
+    <li><b>고3 7월</b><span>학생부 마감 점검, 예상 질문 뱅크 작성</span></li>
+    <li><b>8~9월</b><span>원서 접수, 제시문 기출 주 2회 풀이</span></li>
+    <li><b>10월</b><span>실전 모의 면접 (준비 30분 + 면접 15분 타이머), 녹화 피드백</span></li>
+    <li><b>11월 (1단계 발표 전후)</b><span>수능 이후 면접 집중반, 교사·외부 면접관 교차 모의</span></li>
+    <li><b>면접 직전 1주</b><span>시사 이슈 정리, 컨디션 관리, 학생부 최종 리허설</span></li>
+  </ol>
+  <p class="src">출처/근거: 전국 자사고 입시반 면접 준비 루틴 재구성.</p>
+
+  <!-- 6. 대치동 vs 자사고 -->
+  <h3 class="sub">⑥ 대치동 학원가 · 자사고 입시반, 이렇게 활용하세요</h3>
+  <table class="tbl">
+    <thead><tr><th>항목</th><th>자사고 입시반</th><th>대치동 학원가</th><th>추천 활용법</th></tr></thead>
+    <tbody>
+      <tr><td>세특 관리</td><td class="hi">교사 협업형 세특 관리 시스템 (학기별 주제 점검)</td><td>탐구 주제 코칭, 보고서 첨삭</td><td>주제는 학교 수업 안에서, 깊이는 학원 코칭으로</td></tr>
+      <tr><td>면접</td><td>교내 모의 면접, 졸업생 멘토</td><td class="hi">제시문 면접 클리닉, 실전 모의 반복</td><td>10월부터 대치동 클리닉을 병행</td></tr>
+      <tr><td>수능최저</td><td>학교 수업 + 자습</td><td class="hi">탐구 단과·파이널 특강</td><td>지균 지원자는 탐구 안정화가 최우선</td></tr>
+      <tr><td>정보력</td><td>누적 진학 데이터</td><td>다수 학교 비교 데이터</td><td>두 데이터를 교차해서 지원 전략 수립</td></tr>
+      <tr><td>주의점</td><td>교내 경쟁으로 추천 제한</td><td>템플릿 세특, 과도한 비용</td><td>학생 본인의 언어로 기록되도록 관리</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 대치동 컨설팅 및 자사고 입시반 운영 방식 비교 (현장 자료 종합).</p>
+
+  <!-- 7. 체크리스트 -->
+  <h3 class="sub">⑦ 수시 체크리스트</h3>
+  <div class="grid-2">
+    <div class="card">
+      <h3>학년별 점검</h3>
+      <p>☐ 미적분·확률과 통계·경제 이수 계획 확정 (1학년 말)<br>
+      ☐ 경영·경제 탐구 주제 2~3개를 정해 연속성 확보 (2학년)<br>
+      ☐ 교과 간 융합 탐구 1건 이상 (3학년 1학기)<br>
+      ☐ 독서 기록을 세특과 연결</p>
+    </div>
+    <div class="card accent">
+      <h3>지원 직전 점검</h3>
+      <p>☐ 지균 추천 가능 여부 확인 (2학년 말)<br>
+      ☐ 수능최저(3개 영역 각 3등급) 모의고사 충족률 70% 이상<br>
+      ☐ 학생부 예상 질문 100개 + 제시문 기출 정리<br>
+      ☐ 지원 연도 서울대 모집요강 최종 확인</p>
+    </div>
+  </div>
+</section>
+<section class="section" id="jeongsi">
+  <div class="sec-head">
+    <span class="sec-no">PART 3</span>
+    <h2>정시 · 수능위주전형</h2>
+    <p class="lead">정시는 "수능 한 번"이 아니라 <b>수능 + 교과평가</b>의 이중 구조입니다. 경영대학은 인문계열 최상위 모집단위로, 국·수·탐 중 하나라도 흔들리면 합격권 밖으로 밀려납니다. 아래 브리핑은 영역별 목표 점수와 교과평가 대비까지 한 번에 정리한 정시 설계도입니다.</p>
+  </div>
+
+  <div class="callout warn">⚠️ <b>주의</b> 이 파트의 모든 수치는 공개 입시결과·대치동 학원가 배치표·자사고 진학지도 자료를 종합한 <b>추정치</b>입니다. 반영 비율·감점 수치는 연도별로 바뀔 수 있으므로 지원 연도의 <b>서울대 정시 모집요강</b>으로 반드시 최종 확인하세요.</div>
+
+  <!-- 1. 전형 구조 -->
+  <h3 class="sub">① 전형 구조 — 수능만으로 끝나지 않는다</h3>
+  <div class="grid-2">
+    <div class="card accent">
+      <h3>정시 일반전형</h3>
+      <p><span class="tag">1단계</span> 수능 100% → 모집인원의 <b>2배수</b> 선발</p>
+      <p><span class="tag gold">2단계</span> 1단계 성적(수능) <b>80</b> + 교과평가 <b>20</b></p>
+      <p>N수생·자사고·특목고 학생 비중이 높은 메인 트랙. 1단계 통과자 대부분이 수능 점수 차가 매우 좁아 교과평가 등급이 당락을 가르기도 합니다.</p>
+    </div>
+    <div class="card">
+      <h3>정시 지역균형전형</h3>
+      <p><span class="tag">일괄</span> 수능 <b>60</b> + 교과평가 <b>40</b></p>
+      <p>고교별 추천 인원 제한(학교장 추천, 졸업예정자 대상)이 있으며 교과평가 비중이 매우 큽니다. 일반고 최상위권에게 유리한 구조입니다.</p>
+    </div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>구분</th><th>일반전형</th><th>지역균형전형</th></tr></thead>
+    <tbody>
+      <tr><td>지원 자격</td><td>고교 졸업(예정)자 누구나 · N수 가능</td><td>학교장 추천 졸업예정자</td></tr>
+      <tr><td>선발 방식</td><td>단계별 (1단계 2배수)</td><td>일괄 합산</td></tr>
+      <tr><td>수능 비중</td><td class="hi">1단계 100% → 2단계 80%</td><td>60%</td></tr>
+      <tr><td>교과평가 비중</td><td>20%</td><td class="hi">40%</td></tr>
+      <tr><td>교과평가 대상</td><td colspan="2">학교생활기록부 교과 이수 현황·성취도·세부능력 및 특기사항</td></tr>
+      <tr><td>평가 결과</td><td colspan="2">평가자 2인이 A·B·C 등급 부여 → 점수 환산(A 상위, C 하위)</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 정시 모집요강(2023학년도 교과평가 도입 이후 구조) 정리. 세부 환산 점수는 연도별 요강 확인.</p>
+
+  <div class="grid-3">
+    <div class="card"><h3>A 등급</h3><p>교과 이수·학업 성취·세특이 모두 우수. 경영 관련 수학·사회 교과 심화 이수가 드러남. <b>목표 등급</b>.</p></div>
+    <div class="card"><h3>B 등급</h3><p>전반적으로 양호하나 일부 과목 미이수 또는 성취도·세특 내용이 평이. 수능 점수로 만회가 필요.</p></div>
+    <div class="card"><h3>C 등급</h3><p>교과 이수·성취가 학업 준비도에 미흡. 서울대 최상위 모집단위에서는 사실상 <b>치명적 감점</b>.</p></div>
+  </div>
+
+  <!-- 2. 수능 반영 -->
+  <h3 class="sub">② 수능 반영 방법 — 수학이 가장 무겁다</h3>
+  <div class="grid-2">
+    <div class="iso-chart" data-title="영역별 반영 가중치(표준점수 기준, 상대 비율)">
+      <div class="iso-bar" style="--h:150;--c:#4f7cff"><i>100</i><b>국어</b></div>
+      <div class="iso-bar" style="--h:180;--c:#ff7a59"><i>120</i><b>수학</b></div>
+      <div class="iso-bar" style="--h:120;--c:#2ec4b6"><i>80</i><b>탐구(2과목)</b></div>
+      <div class="iso-bar" style="--h:24;--c:#9aa5b1"><i>감점</i><b>영어</b></div>
+      <div class="iso-bar" style="--h:20;--c:#c3cad3"><i>감점</i><b>한국사</b></div>
+    </div>
+    <div class="card">
+      <h3>핵심 포인트</h3>
+      <p>• 국어·수학·탐구는 <b>표준점수</b> 기반으로 반영(탐구는 서울대 자체 변환 표준점수 활용 가능성 확인).</p>
+      <p>• 수학 가중치가 국어보다 약 <b>1.2배</b> — 수학 1문항이 국어 1문항보다 무겁습니다.</p>
+      <p>• 영어·한국사는 <b>등급별 감점</b> 방식: 1등급이면 손실 0, 아니면 즉시 손해.</p>
+      <p>• 총점 기준 경영대학 합격권 내 점수 밀도가 매우 높아 <b>1~2점 차이</b>로 수십 명이 갈립니다.</p>
+    </div>
+  </div>
+  <p class="src">출처/근거: 서울대 정시 수능 반영 방식(국100·수120·탐80 수준) 학원가 환산 자료 기준 상대 비율.</p>
+
+  <table class="tbl">
+    <thead><tr><th>등급</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6 이하</th></tr></thead>
+    <tbody>
+      <tr><td>영어 감점</td><td class="hi">0</td><td>-0.5</td><td>-2.0</td><td>-4.0</td><td>-6.0</td><td>추가 감점</td></tr>
+      <tr><td>한국사 감점</td><td class="hi">0</td><td class="hi">0</td><td class="hi">0</td><td>-0.4</td><td>-0.8</td><td>추가 감점</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 정시 영어·한국사 감점 기준(최근 연도 요강 정리). 5등급 이하 값은 연도별 변동 가능.</p>
+
+  <div class="callout">💡 <b>컨설턴트 코멘트</b> 영어 2등급의 -0.5점은 작아 보이지만, 경영대학 합격선 주변에서는 <b>수십 등 차이</b>입니다. 영어는 "절대평가라 편하다"가 아니라 <b>"1등급이 기본값"</b>인 과목으로 생각하세요. 한국사는 3등급까지 감점이 없으니 과투자 금지.</div>
+
+  <!-- 3. 합격선 분석 -->
+  <h3 class="sub">③ 합격선 분석 — 인문계열 최상단</h3>
+  <div class="iso-chart" data-title="서울대 인문·사회계열 주요 모집단위 추정 합격선 (국·수·탐 백분위 평균)">
+    <div class="iso-bar" style="--h:200;--c:#ff7a59"><i>99.2</i><b>경영대학</b></div>
+    <div class="iso-bar" style="--h:190;--c:#4f7cff"><i>99.0</i><b>경제학부</b></div>
+    <div class="iso-bar" style="--h:185;--c:#4f7cff"><i>98.9</i><b>자유전공</b></div>
+    <div class="iso-bar" style="--h:175;--c:#2ec4b6"><i>98.7</i><b>정치외교</b></div>
+    <div class="iso-bar" style="--h:165;--c:#2ec4b6"><i>98.5</i><b>사회학과</b></div>
+    <div class="iso-bar" style="--h:150;--c:#9aa5b1"><i>98.2</i><b>인문계열</b></div>
+  </div>
+  <p class="src">출처/근거: 대치동 주요 학원 배치표·입시기관 합격 예측 자료를 종합한 <b>추정치</b>(연도·난이도별 ±0.3 변동). 누적 기준 대략 전국 상위 0.3~0.5% 수준.</p>
+
+  <table class="tbl">
+    <thead><tr><th>영역</th><th>합격 안정권 목표</th><th>소신 지원 최저선</th><th>컨설턴트 메모</th></tr></thead>
+    <tbody>
+      <tr><td>국어</td><td class="hi">1등급 상위 (백분위 99~100)</td><td>백분위 97</td><td>언어와매체 선택 시 표점 유리 경향</td></tr>
+      <tr><td>수학</td><td class="hi">1등급 최상위 · 만점권 (백분위 100)</td><td>백분위 98</td><td>가중치 최대 — 킬러·준킬러 완성도가 당락</td></tr>
+      <tr><td>영어</td><td class="hi">1등급</td><td>2등급(-0.5)</td><td>2등급이면 국·수·탐에서 만회 필요</td></tr>
+      <tr><td>탐구 2과목</td><td class="hi">1등급 - 1등급 (백분위 98+)</td><td>1-2</td><td>과목 간 표준점수 편차 체크 필수</td></tr>
+      <tr><td>한국사</td><td>3등급 이내</td><td>3등급</td><td>감점 없음 구간만 확보</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 최근 3개년 서울대 경영 정시 합격자 성적대(학원가 실채점 상담 데이터 경향) 정리.</p>
+
+  <!-- 4. 교과평가 -->
+  <h3 class="sub">④ 교과평가 대비 — 정시파도 내신·세특을 버리면 안 된다</h3>
+  <div class="grid-2">
+    <div class="card">
+      <h3>왜 정시에도 학생부인가?</h3>
+      <p>1단계 통과자(2배수)의 수능 점수는 거의 비슷합니다. 2단계에서 교과평가 A와 B의 차이는 <b>수능 몇 점 차이</b>에 해당할 수 있어, "수능 잘 보고도 떨어지는" 사례의 주원인이 됩니다.</p>
+      <p>특히 지역균형(정시)은 교과 40% — 사실상 <b>내신 전형</b>에 가깝습니다.</p>
+    </div>
+    <div class="hbars">
+      <div class="hbar" style="--v:95"><span>수학 심화 이수(미적분·확률과 통계)</span><em>최중요</em></div>
+      <div class="hbar" style="--v:85"><span>경제·사회 계열 선택과목 이수</span><em>중요</em></div>
+      <div class="hbar" style="--v:80"><span>주요 교과 성취도(A / 1~2등급)</span><em>중요</em></div>
+      <div class="hbar" style="--v:70"><span>세특의 학업 태도·탐구 기록</span><em>보통+</em></div>
+      <div class="hbar" style="--v:45"><span>비교과(동아리·봉사)</span><em>미반영</em></div>
+    </div>
+  </div>
+  <p class="src">출처/근거: 서울대 교과평가 안내(교과 이수·성취도·세특 중심, 비교과 미반영) 및 자사고 진학부 내부 가이드 경향.</p>
+
+  <div class="hbars">
+    <div class="hbar" style="--v:88"><span>자사고 정시반: A등급 비율(추정)</span><em>약 85~90%</em></div>
+    <div class="hbar" style="--v:70"><span>일반고 정시파: A등급 비율(추정)</span><em>약 65~75%</em></div>
+    <div class="hbar" style="--v:40"><span>검정고시·학생부 미흡: A등급 비율(추정)</span><em>낮음</em></div>
+  </div>
+  <p class="src">출처/근거: 학원가 정시 상담 사례 기반 경향치(공식 통계 아님).</p>
+
+  <div class="callout">💡 <b>컨설턴트 코멘트</b> 고1·고2 학부모님께: "우리 아이는 정시파"라는 이유로 내신을 포기하면 서울대 정시에서 손해를 봅니다. <b>미적분·확률과 통계·경제</b> 이수와 수업 세특 관리는 정시 교과평가 A등급의 최소 조건입니다.</div>
+
+  <!-- 5. 선택과목 -->
+  <h3 class="sub">⑤ 선택과목 전략 — 수학·탐구 조합</h3>
+  <table class="tbl">
+    <thead><tr><th>수학 선택</th><th>표준점수 최고점 경향</th><th>인문계 최상위권 선택</th><th>장단점</th></tr></thead>
+    <tbody>
+      <tr><td>미적분</td><td class="hi">상대적으로 높음 (확통 대비 +수 점)</td><td>증가 추세 (상위권 다수)</td><td>표점 유리 · 이과 상위권과 경쟁</td></tr>
+      <tr><td>확률과 통계</td><td>상대적으로 낮음</td><td>감소 추세</td><td>학습 부담↓ · 만점 받아도 표점 손해 가능</td></tr>
+      <tr><td>기하</td><td>연도별 변동</td><td>소수</td><td>인문계에서는 비추천</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 최근 수능 선택과목별 표준점수 최고점 공개 자료 경향 · 대치동 수학 단과 상담 경향.</p>
+
+  <table class="tbl">
+    <thead><tr><th>탐구 조합</th><th>경영대학 지원 가능</th><th>특징</th><th>추천도</th></tr></thead>
+    <tbody>
+      <tr><td>사탐 + 사탐</td><td>가능</td><td>전통적 인문계 조합. "사탐런"으로 응시자 증가 → 1등급 경쟁 치열</td><td><span class="tag">보통</span></td></tr>
+      <tr><td>사탐 + 과탐</td><td>가능</td><td>과목 간 표점 편차 관리 필요</td><td><span class="tag">보통</span></td></tr>
+      <tr><td>과탐 + 과탐</td><td>가능</td><td>교차지원 이과생 다수. 고난도 과목 표점 유리 가능</td><td><span class="tag gold">상위권 한정</span></td></tr>
+      <tr><td>경제 포함 사탐</td><td>가능</td><td>전공 적합성↑ · 응시자 적어 등급 변동성 큼</td><td><span class="tag gold">전략적</span></td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 서울대 정시 탐구 응시 기준(최근 요강), 사탐런 현상 관련 학원가 분석 경향.</p>
+
+  <!-- 6. N수 / 학원가 / 자사고 -->
+  <h3 class="sub">⑥ N수·대치동·자사고 정시반 — 누구와 경쟁하는가</h3>
+  <div class="iso-stack">
+    <div class="layer" style="--c:#ff7a59">재수·N수생 (서울대 정시 합격자 중 상당 비중)</div>
+    <div class="layer" style="--c:#4f7cff">자사고·외고 졸업생 (현역·재수 혼재)</div>
+    <div class="layer" style="--c:#2ec4b6">강남·목동 일반고 현역 최상위</div>
+    <div class="layer" style="--c:#9aa5b1">지방 일반고 현역 (지균 정시 활용)</div>
+  </div>
+  <p class="src">출처/근거: 서울대 정시 합격자 출신 유형 관련 언론 보도·학원가 분석의 일반 경향(정확한 비율은 연도별 상이).</p>
+
+  <table class="tbl">
+    <thead><tr><th>준비 경로</th><th>운영 방식(일반 경향)</th><th>강점</th><th>유의점</th></tr></thead>
+    <tbody>
+      <tr><td>대치동 재종반 (시대인재·러셀 등)</td><td>자체 모의고사·실전 컨텐츠 · 반 편성 경쟁</td><td>콘텐츠 물량·실전 감각</td><td>자기주도 관리 약하면 소화 불량</td></tr>
+      <tr><td>대치동 단과 (두각 등)</td><td>과목별 스타 강사 · 주간 테스트</td><td>약점 과목 집중 보완</td><td>과목 간 시간 배분 직접 설계 필요</td></tr>
+      <tr><td>자사고 정시반</td><td>고3 정시 집중 편성 · 교내 자습·모의 관리</td><td>내신·세특 동시 관리 → 교과평가 유리</td><td>학교별 운영 편차 큼</td></tr>
+      <tr><td>독학 + 인강</td><td>인강·독서실 · 사설 모의 병행</td><td>비용 효율 · 페이스 자율</td><td>정보력·멘탈 관리 취약</td></tr>
+    </tbody>
+  </table>
+  <p class="src">출처/근거: 대치동 학원가·자사고 진학지도 일반 경향(특정 기관 성과를 보증하지 않음).</p>
+
+  <!-- 7. 로드맵 -->
+  <h3 class="sub">⑦ 고3 정시 1년 로드맵</h3>
+  <ol class="timeline">
+    <li><b>1~2월</b><span>수학 전 범위 1회독 완료 · 국어 독서 기출 분석 · 탐구 개념 완성</span></li>
+    <li><b>3월 학평</b><span>현 위치 진단 — 국·수·탐 백분위 평균 97 이상이면 서울대 경영 정시 가시권</span></li>
+    <li><b>6월 모평</b><span>평가원 첫 시험 · N수생 합류 후 실제 위치 확인 · 수시/정시 비중 결정</span></li>
+    <li><b>7~8월</b><span>약점 영역 집중 · 실전 모의고사 주 2~3회 · 영어 1등급 안정화</span></li>
+    <li><b>9월 모평</b><span>수시 원서 접수와 병행 · 최종 정시 목표선 확정</span></li>
+    <li><b>10~11월</b><span>실전 리허설(시간·컨디션) · 파이널 모의 · 수능 응시</span></li>
+    <li><b>12월</b><span>성적 발표 → 표준점수 환산 · 배치표·모의지원 분석 · 가·나·다군 조합</span></li>
+    <li><b>1~2월</b><span>원서 접수 → 1단계 발표 → 최종 합격 발표 · 추가 합격</span></li>
+  </ol>
+  <p class="src">출처/근거: 한국교육과정평가원 시행 일정 및 일반적 정시 일정 기준(연도별 정확한 날짜는 공고 확인).</p>
+
+  <!-- 8. 2028 개편 -->
+  <h3 class="sub">⑧ 2028 대입 개편 — 고2 이하 학생 필독</h3>
+  <div class="grid-3">
+    <div class="card accent"><h3>통합형 수능</h3><p>국어·수학 선택과목 폐지 → 공통 출제. 미적분·확통 선택 유불리가 사라지고 <b>순수 실력 경쟁</b>으로.</p></div>
+    <div class="card"><h3>통합사회·통합과학</h3><p>탐구가 통합사회·통합과학으로 바뀌어 모든 수험생이 응시. 과목 선택 전략보다 <b>기본 개념 완성도</b>가 관건.</p></div>
+    <div class="card"><h3>내신 5등급제</h3><p>1등급 비율 확대(상위 10%) → 내신 변별력 저하. 서울대는 <b>세특·교과 이수의 질</b>로 변별할 가능성 ↑ → 교과평가 중요성 증가.</p></div>
+  </div>
+  <p class="src">출처/근거: 교육부 2028 대입제도 개편 확정안 발표 내용 정리.</p>
+
+  <div class="callout">💡 <b>컨설턴트 결론</b> 서울대 경영 정시 합격 공식 = <b>수학 만점권</b> + 국어·탐구 1등급 상위 + <b>영어 1등급</b> + <b>교과평가 A</b>. 네 가지 중 하나라도 빠지면 경제학부·자유전공 등 인접 모집단위와의 지원 전략(군별 조합)으로 리스크를 분산하세요.</div>
+</section>
+<section class="section" id="compare">
+  <div class="sec-head"><span class="sec-no">PART 4</span><h2>수시 vs 정시 — 우리 아이는 어느 트랙인가?</h2>
+  <p class="lead">고1 2학기 성적표와 고2 3월 모의고사가 나오면 트랙 판단을 시작합니다. 아래 진단표로 1차 판정을 해보세요.</p></div>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>진단 항목</th><th>수시 유리 신호</th><th>정시 유리 신호</th></tr></thead>
+    <tbody>
+      <tr><td>전교과 내신 (일반고 기준)</td><td class="hi">1.0~1.3</td><td>1.5 이하로 내려가기 어려움</td></tr>
+      <tr><td>모의고사 국·수·탐 백분위 평균</td><td>96~98 (지균 최저 여유)</td><td class="hi">99 이상 안정</td></tr>
+      <tr><td>수학 모의고사</td><td>1등급 하단~2등급</td><td class="hi">1등급 최상위 · 만점권</td></tr>
+      <tr><td>세특·탐구 활동</td><td class="hi">경영·경제 주제 3개 이상 연결</td><td>활동 적고 문제풀이 중심</td></tr>
+      <tr><td>학교 유형</td><td>일반고 1~2등 (지균 추천 가능)</td><td>자사고·특목고 내신 3등급대</td></tr>
+      <tr><td>말하기·논리 전개</td><td class="hi">제시문 면접 대응 가능</td><td>긴장도 높음 · 시험형 강점</td></tr>
+    </tbody></table></div>
+
+  <div class="iso-chart" data-title="학교 유형별 수시:정시 합격 비중 (경영대학, 추정)">
+    <div class="iso-bar" style="--h:180;--c:#4f7cff"><i>수시 80%</i><b>일반고</b></div>
+    <div class="iso-bar" style="--h:45;--c:#f2b134"><i>정시 20%</i><b>일반고</b></div>
+    <div class="iso-bar" style="--h:110;--c:#4f7cff"><i>수시 50%</i><b>전국 자사고</b></div>
+    <div class="iso-bar" style="--h:110;--c:#f2b134"><i>정시 50%</i><b>전국 자사고</b></div>
+    <div class="iso-bar" style="--h:150;--c:#4f7cff"><i>수시 65%</i><b>외고·국제고</b></div>
+    <div class="iso-bar" style="--h:80;--c:#f2b134"><i>정시 35%</i><b>외고·국제고</b></div>
+    <div class="iso-bar" style="--h:25;--c:#4f7cff"><i>수시 10%</i><b>N수생</b></div>
+    <div class="iso-bar" style="--h:195;--c:#f2b134"><i>정시 90%</i><b>N수생</b></div>
+  </div>
+  <p class="src">근거: 서울대 합격자 출신고교 유형 공시(대학알리미)·자사고 진학실적 발표 자료·대치동 컨설팅 사례를 종합한 경향 추정치. 정확한 비율이 아닌 방향성 지표입니다.</p>
+
+  <div class="grid-3">
+    <div class="card"><h3>📘 수시 올인형</h3><p>일반고 내신 1.0~1.2, 지균 추천 확실. 수능은 최저(3개 3등급)만 안정 확보하고 시간을 세특·면접에 투자.</p></div>
+    <div class="card accent"><h3>⚖️ 투트랙형 (가장 많음)</h3><p>자사고·강남 일반고 상위권. 일반전형 학종 + 정시 병행. 고3 6월 모평 결과로 비중 재조정.</p></div>
+    <div class="card"><h3>📝 정시 올인형</h3><p>내신 경쟁 불리하지만 모의고사 백분위 99+. 단, 교과평가 대비 위해 핵심 과목 이수·세특 최소 관리 필수.</p></div>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="sec-head"><span class="sec-no">PART 5</span><h2>학년별 마스터 로드맵</h2>
+  <p class="lead">대치동 컨설팅과 자사고 입시반의 연간 운영 캘린더를 결합한 표준 로드맵입니다.</p></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>시기</th><th>내신·교과</th><th>세특·활동</th><th>수능·모의고사</th><th>학원/입시반 활용</th></tr></thead>
+    <tbody>
+      <tr><td><b>중3 겨울</b></td><td>고1 수학(공통수학) 선행 2회독</td><td>경영·경제 교양서 독서 시작</td><td>—</td><td>대치동 내신 대비반 · 독서 클럽</td></tr>
+      <tr><td><b>고1</b></td><td class="hi">전 과목 1등급 목표 (내신 기초 체력)</td><td>경제 동아리 · 통합사회 탐구보고서</td><td>3·6·9·11월 학평으로 위치 확인</td><td>자사고: 1학기 말 1차 진로 상담</td></tr>
+      <tr><td><b>고2</b></td><td>미적분 · 확률과 통계 · 경제 이수</td><td class="hi">핵심 탐구 주제 1개를 심화 (데이터 분석)</td><td>국·수 수능형 전환 시작</td><td>2학기 말 트랙 확정 · 면접 기초반</td></tr>
+      <tr><td><b>고3 1학기</b></td><td>경제수학·심화 과목 마무리</td><td>탐구 결과 정리 · 진로 연결</td><td>6월 모평 → 지균 최저/정시 판정</td><td>자소서 폐지 이후 ‘학생부 정리’ 컨설팅</td></tr>
+      <tr><td><b>고3 2학기</b></td><td>—</td><td>9월 원서 · 학교장 추천</td><td class="hi">수능 (11월)</td><td>서류 합격 후 면접 집중반 (11~12월)</td></tr>
+    </tbody></table></div>
+
+  <ol class="timeline">
+    <li><b>3월</b><span>고3 첫 학평 — 수학 1등급 컷 대비 위치 확인, 지균 추천 희망 의사 전달</span></li>
+    <li><b>6월</b><span>평가원 모의평가 — 수시 지원 조합(서울대 + 연고대 + α) 결정의 기준점</span></li>
+    <li><b>9월</b><span>수시 원서 접수 · 9월 모평으로 정시 예상 위치 재점검</span></li>
+    <li><b>11월</b><span>수능 · 수시 1단계 발표 후 면접 준비 (일반전형)</span></li>
+    <li><b>12월</b><span>수시 최종 발표 → 미등록 시 정시 원서 전략 수립</span></li>
+    <li><b>1~2월</b><span>정시 원서(가군) · 1단계 · 교과평가 · 최종 발표</span></li>
+  </ol>
+</section>
+
+<section class="section" id="faq">
+  <div class="sec-head"><span class="sec-no">PART 6</span><h2>학부모님이 가장 많이 묻는 질문</h2></div>
+  <div class="grid-2">
+    <div class="card"><h3>Q. 자사고가 일반고보다 유리한가요?</h3><p>수시 지균은 일반고가, 일반전형·정시는 자사고가 상대적으로 강합니다. 자사고 내신 2점대로도 일반전형 합격 사례가 있지만, 세특의 학업 깊이가 일반고 1점대 학생보다 확실히 앞서야 합니다.</p></div>
+    <div class="card"><h3>Q. 경제 과목을 꼭 들어야 하나요?</h3><p>필수 지정은 아니지만, 경영 지원자가 학교에 개설된 경제를 이수하지 않으면 전공 관심도를 설명하기 어렵습니다. 대치동 컨설팅에서는 ‘사실상 필수’로 안내합니다.</p></div>
+    <div class="card"><h3>Q. 인문계인데 미적분을 선택해야 하나요?</h3><p>수시에선 학업 도전성, 정시에선 표준점수 측면에서 미적분 선택이 유리하다는 것이 학원가의 공통 의견입니다. 다만 등급 하락 위험이 크면 확률과 통계 + 심화 세특으로 보완합니다.</p></div>
+    <div class="card"><h3>Q. 경시대회·외부 스펙이 필요한가요?</h3><p>학생부에 기재되지 않는 외부 수상·인증은 반영되지 않습니다. 교내 수업과 연계된 탐구가 가장 강력한 스펙입니다.</p></div>
+  </div>
+  <div class="callout warn">⚠️ <b>면책 고지</b> 이 백과사전의 수치(합격 내신대, 백분위, 전형 비중 등)는 공개된 입시결과·대학알리미 공시·대치동 학원가 배치표·자사고 진학지도 자료의 경향을 종합한 <b>추정치</b>입니다. 전형 방법과 반영 비율은 매년 바뀔 수 있으므로 반드시 지원 연도 서울대학교 입학본부(admission.snu.ac.kr) 모집요강으로 최종 확인하세요.</div>
+</section>
+</main>
+<footer><div class="in">
+  <b style="color:#fff">서울대학교 경영대학 입시전략 백과사전</b><br>
+  입시생·학부모 브리핑 자료 · 수시/정시 분리 분석 · 아이소메트릭 인포그래픽 에디션<br>
+  자료 근거: 서울대 입학본부 모집요강, 대학알리미 공시, 대치동 학원가 배치표·컨설팅 자료, 자사고 입시반 운영 자료(경향 추정)
+</div></footer>
+<script>
+// 스크롤 진행바 · 섹션 등장 애니메이션 · 현재 섹션 하이라이트
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('.iso-chart,.hbars,.iso-stack,.tbl-wrap,table.tbl,.card,.timeline,.flow').forEach(el=>el.classList.add('reveal'));
+document.querySelectorAll('.iso-bar,.hbar').forEach(el=>el.style.animationPlayState='paused');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');e.target.querySelectorAll('.iso-bar,.hbar').forEach((b,i)=>{b.style.animationDelay=(i*0.08)+'s';b.style.animationPlayState='running'});io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll('nav.top a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('section.section').forEach(s=>so.observe(s));
+</script>
+</body>
+</html>

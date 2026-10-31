@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서울대학교 경영대학 입시전략 백과사전 — 수시·정시 완전 분석</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#f3f5fb; --ink:#141a33; --muted:#5b6380; --line:#dfe3f0;
+  --navy:#0f1d4a; --blue:#4f7cff; --sky:#3fc1ff; --mint:#22c39a; --gold:#f2b134; --rose:#ff6b8a; --violet:#8b6cff;
+  --card:#ffffff; --shadow:0 1px 2px rgba(15,29,74,.06),0 8px 24px rgba(15,29,74,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:16px;word-break:keep-all}
+a{color:var(--blue)}
+/* ---------- NAV ---------- */
+nav.top{position:sticky;top:0;z-index:50;background:rgba(15,29,74,.92);backdrop-filter:blur(8px);color:#fff}
+nav.top .in{max-width:1180px;margin:auto;display:flex;gap:6px;align-items:center;padding:10px 20px;overflow-x:auto}
+nav.top b{margin-right:14px;white-space:nowrap;letter-spacing:-.02em}
+nav.top a{color:#c9d4ff;text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;font-size:14px}
+nav.top a:hover,nav.top a.on{background:rgba(255,255,255,.14);color:#fff}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sky),var(--gold));z-index:60;width:0}
+/* ---------- HERO ---------- */
+.hero{background:radial-gradient(1200px 500px at 80% 10%,#2a3f9a 0,transparent 60%),linear-gradient(160deg,#0b1538,#14286b 60%,#1b3790);color:#fff;overflow:hidden}
+.hero .in{max-width:1180px;margin:auto;padding:70px 20px 80px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(30px,4.4vw,52px);line-height:1.18;margin:.3em 0;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--sky),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#c9d4ff;font-size:17px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px}
+.kpi b{display:block;font-size:26px;color:#fff;letter-spacing:-.02em}
+.kpi span{font-size:13px;color:#aab8ee}
+/* ---------- ISOMETRIC CAMPUS (hero art) ---------- */
+.iso-scene{height:420px;position:relative;perspective:none}
+.iso-world{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%) rotateX(58deg) rotateZ(-45deg);transform-style:preserve-3d;width:300px;height:300px}
+.iso-ground{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 30px),#1e3a9e;border-radius:10px;box-shadow:0 0 0 2px rgba(255,255,255,.08),30px 30px 60px rgba(0,0,0,.35)}
+.blk{position:absolute;transform-style:preserve-3d;--w:60px;--d:60px;--z:80px;--c:#4f7cff;width:var(--w);height:var(--d);animation:rise 1.2s cubic-bezier(.2,.9,.3,1.2) both}
+.blk .t,.blk .l,.blk .r{position:absolute}
+.blk .t{inset:0;background:var(--c);transform:translateZ(var(--z));filter:brightness(1.18);display:grid;place-items:center;font-weight:800;color:#fff;font-size:13px}
+.blk .l{left:0;bottom:0;width:var(--w);height:var(--z);background:var(--c);transform-origin:bottom;transform:rotateX(-90deg);filter:brightness(.85);background-image:repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.25) 8px 12px),repeating-linear-gradient(0deg,transparent 0 10px,rgba(0,0,0,.12) 10px 12px)}
+.blk .r{right:0;top:0;width:var(--z);height:var(--d);background:var(--c);transform-origin:right;transform:rotateY(90deg);filter:brightness(.68);background-image:repeating-linear-gradient(0deg,transparent 0 8px,rgba(255,255,255,.2) 8px 12px)}
+@keyframes rise{from{transform:translateZ(-60px) scale(.6)}to{transform:none}}
+.flag{position:absolute;color:#fff;font-size:12px;font-weight:700;background:rgba(0,0,0,.35);padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2);white-space:nowrap}
+/* ---------- LAYOUT ---------- */
+main{max-width:1180px;margin:auto;padding:0 20px 80px}
+.section{padding:64px 0 10px;border-bottom:1px dashed var(--line)}
+.sec-head{margin-bottom:26px}
+.sec-no{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--blue);background:#e7edff;padding:4px 12px;border-radius:999px}
+.sec-head h2{font-size:clamp(26px,3.2vw,38px);margin:.3em 0 .2em;letter-spacing:-.03em}
+.lead{color:var(--muted);font-size:17px;max-width:860px}
+h3.sub{font-size:22px;margin:44px 0 14px;padding-left:14px;border-left:5px solid var(--blue);letter-spacing:-.02em}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:16px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,29,74,.14)}
+.card h3{margin:0 0 8px;font-size:18px}
+.card.accent{background:linear-gradient(150deg,#14286b,#2c4fc9);color:#fff;border:0}
+.card.accent h3{color:#fff}.card.accent p,.card.accent li{color:#dbe3ff}
+.card ul{padding-left:18px;margin:6px 0}
+/* tables */
+.tbl-wrap{overflow-x:auto;margin:14px 0}
+table.tbl{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-size:15px;margin:14px 0}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:11px 14px;font-weight:700;white-space:nowrap}
+.tbl td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tbody tr:nth-child(even) td{background:#f8f9fd}
+.tbl tbody tr:hover td{background:#eef2ff}
+.tbl td.hi{background:#fff6dd!important;font-weight:700;color:#8a5a00}
+/* callouts, tags, source */
+.callout{background:#eef3ff;border:1px solid #cfdaff;border-left:6px solid var(--blue);border-radius:12px;padding:14px 18px;margin:18px 0}
+.callout.warn{background:#fff6ec;border-color:#ffd9b0;border-left-color:#ff8a2b}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;background:#e7edff;color:#2d4fd1;margin:2px 3px 2px 0}
+.tag.gold{background:#fff1cc;color:#8a5a00}
+.src{font-size:12.5px;color:#8a91aa;margin:4px 0 18px}
+/* ---------- ISO BAR CHART ---------- */
+.iso-chart{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:34px;padding:96px 20px 60px;background:linear-gradient(180deg,#ffffff,#eef2fb);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);margin:18px 0 6px;min-height:300px;flex-wrap:wrap}
+.iso-chart::before{content:attr(data-title);position:absolute;top:16px;left:20px;font-weight:800;font-size:16px;color:var(--navy)}
+.iso-bar{--h:100;--c:var(--blue);position:relative;width:54px;height:calc(var(--h) * 1px);background:var(--c);margin-right:14px;transform-origin:bottom;animation:grow 1s cubic-bezier(.2,.9,.3,1) both;margin-bottom:28px}
+.iso-bar::before{content:"";position:absolute;top:-14px;left:0;width:54px;height:14px;background:var(--c);filter:brightness(1.25);transform:skewX(-45deg);transform-origin:bottom left}
+.iso-bar::after{content:"";position:absolute;top:-14px;right:-14px;width:14px;height:100%;background:var(--c);filter:brightness(.7);transform:skewY(-45deg);transform-origin:bottom left}
+.iso-bar>*{position:relative}
+.iso-bar i{position:absolute;top:-42px;left:50%;transform:translateX(-50%);font-style:normal;font-weight:800;font-size:14px;white-space:nowrap;color:var(--navy)}
+.iso-bar b{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-size:12.5px;white-space:nowrap;color:var(--muted);font-weight:600}
+.iso-chart .iso-bar{box-shadow:inset 0 -6px 0 rgba(0,0,0,.08)}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.iso-bar.in-view{animation-play-state:running}
+/* ---------- HBARS ---------- */
+.hbars{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow);margin:14px 0 6px}
+.hbar{--v:50;position:relative;display:grid;grid-template-columns:170px 1fr 60px;align-items:center;gap:12px;margin:8px 0}
+.hbar span{font-size:14px;font-weight:600}
+.hbar::after{content:"";grid-column:2;grid-row:1;height:18px;border-radius:4px;width:calc(var(--v) * 1%);background:linear-gradient(90deg,var(--blue),var(--sky));box-shadow:4px 4px 0 rgba(15,29,74,.15);animation:fill 1.2s ease both}
+.hbar em{grid-column:3;grid-row:1;font-style:normal;font-weight:800;color:var(--navy);text-align:right}
+.hbar::before{content:"";grid-column:2;grid-row:1;height:18px;border-radius:4px;background:#edf0f8}
+@keyframes fill{from{width:0}}
+/* ---------- ISO STACK (pyramid) ---------- */
+.iso-stack{display:flex;flex-direction:column;align-items:center;padding:30px 10px 40px;perspective:900px;margin:14px 0}
+.iso-stack .layer{--c:var(--blue);position:relative;color:#fff;font-weight:700;text-align:center;padding:16px 18px;margin-top:-6px;background:var(--c);transform:rotateX(38deg);border-radius:6px;box-shadow:0 10px 0 color-mix(in srgb,var(--c) 70%,#000),0 22px 30px rgba(15,29,74,.25);font-size:15px}
+.iso-stack .layer:nth-child(1){width:40%;z-index:5}
+.iso-stack .layer:nth-child(2){width:56%;z-index:4}
+.iso-stack .layer:nth-child(3){width:72%;z-index:3}
+.iso-stack .layer:nth-child(4){width:86%;z-index:2}
+.iso-stack .layer:nth-child(5){width:98%;z-index:1}
+/* ---------- TIMELINE ---------- */
+ol.timeline{list-style:none;padding:0;margin:16px 0;position:relative}
+ol.timeline::before{content:"";position:absolute;left:94px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--blue),var(--sky))}
+ol.timeline li{display:grid;grid-template-columns:80px 1fr;gap:34px;padding:9px 0;position:relative}
+ol.timeline li::before{content:"";position:absolute;left:88px;top:16px;width:15px;height:15px;background:#fff;border:3px solid var(--blue);transform:rotate(45deg)}
+ol.timeline b{text-align:right;color:var(--navy)}
+ol.timeline span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;box-shadow:var(--shadow)}
+/* ---------- ISO TILES (overview cards) ---------- */
+.iso-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin:24px 0}
+.tile{position:relative;background:#fff;border-radius:14px;padding:22px 18px 18px;border:1px solid var(--line);box-shadow:8px 8px 0 #d7def5,var(--shadow);transform:perspective(800px) rotateX(8deg) rotateY(-8deg);transition:transform .35s}
+.tile:hover{transform:perspective(800px) rotateX(0) rotateY(0) translateY(-4px)}
+.tile .ic{font-size:30px}
+.tile b{display:block;font-size:24px;color:var(--navy);margin-top:4px}
+.tile span{font-size:13.5px;color:var(--muted)}
+/* flow diagram */
+.flow{display:flex;gap:0;align-items:stretch;margin:18px 0;flex-wrap:wrap}
+.flow .step{flex:1;min-width:150px;background:#fff;border:1px solid var(--line);padding:16px;position:relative;box-shadow:var(--shadow);clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%,18px 50%);padding-left:30px}
+.flow .step:first-child{clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%);padding-left:16px}
+.flow .step:nth-child(odd){background:#eef3ff}
+.flow .step b{display:block;color:var(--navy)}
+.flow .step small{color:var(--muted)}
+/* radar svg */
+.radar text{font-size:12px;fill:var(--muted);font-weight:600}
+/* footer */
+footer{background:var(--navy);color:#aab8ee;padding:40px 20px;font-size:13.5px}
+footer .in{max-width:1180px;margin:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+@media (max-width:860px){.hero .in,.grid-2,.grid-3{grid-template-columns:1fr}.iso-tiles{grid-template-columns:repeat(2,1fr)}.hbar{grid-template-columns:110px 1fr 48px}.iso-scene{height:320px}}
+@media print{nav.top,#progress{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav class="top"><div class="in">
+  <b>🎓 SNU 경영 입시백과</b>
+  <a href="#overview">개요</a><a href="#susi">수시</a><a href="#jeongsi">정시</a><a href="#compare">수시 vs 정시</a><a href="#roadmap">학년별 로드맵</a><a href="#faq">FAQ</a>
+</div></nav>
+<header class="hero"><div class="in">
+  <div>
+    <span class="sec-no" style="background:rgba(255,255,255,.12);color:#9fc1ff">CONSULTING BRIEFING · 2027~2028학년도 대비</span>
+    <h1>서울대학교 <em>경영대학</em><br>입시전략 백과사전</h1>
+    <p>입시생과 학부모님을 위한 컨설턴트 브리핑. 수시(학생부종합)와 정시(수능)를 분리해 필요한 과목·활동·점수대를 표와 그래프로 근거 있게 정리했습니다. 대치동 학원가 배치·컨설팅 자료와 자사고 입시반 운영 노하우를 종합했습니다.</p>
+    <div class="kpis">
+      <div class="kpi"><b>2개 트랙</b><span>수시 지균·일반 / 정시 일반·지균</span></div>
+      <div class="kpi"><b>상위 0.3%</b><span>정시 합격권 누적 백분위(추정)</span></div>
+      <div class="kpi"><b>1.0~1.3</b><span>일반고 수시 합격 내신대(추정)</span></div>
+    </div>
+  </div>
+  <div class="iso-scene" aria-label="아이소메트릭 서울대 경영대학 캠퍼스 일러스트">
+    <div class="iso-world">
+      <div class="iso-ground"></div>
+      <div class="blk" style="left:20px;top:20px;--w:110px;--d:80px;--z:130px;--c:#4f7cff;animation-delay:.1s"><div class="l"></div><div class="r"></div><div class="t">경영대 58동</div></div>
+      <div class="blk" style="left:160px;top:30px;--w:90px;--d:70px;--z:90px;--c:#22c39a;animation-delay:.3s"><div class="l"></div><div class="r"></div><div class="t">LG경영관</div></div>
+      <div class="blk" style="left:30px;top:150px;--w:70px;--d:110px;--z:60px;--c:#8b6cff;animation-delay:.5s"><div class="l"></div><div class="r"></div><div class="t">수시</div></div>
+      <div class="blk" style="left:140px;top:150px;--w:70px;--d:110px;--z:100px;--c:#f2b134;animation-delay:.7s"><div class="l"></div><div class="r"></div><div class="t">정시</div></div>
+      <div class="blk" style="left:230px;top:200px;--w:50px;--d:60px;--z:40px;--c:#ff6b8a;animation-delay:.9s"><div class="l"></div><div class="r"></div><div class="t">면접</div></div>
+    </div>
+    <span class="flag" style="left:8%;top:8%">학업역량 · 진로역량 · 공동체역량</span>
+    <span class="flag" style="right:4%;bottom:10%">국어 100 : 수학 120 : 탐구 80</span>
+  </div>
+</div></header>
+<main>
