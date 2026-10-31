@@ -1,0 +1,102 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Black Han Sans";
+      src: url("assets/fonts/BlackHanSans-sub.woff2");
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .c-shot {
+      position: absolute;
+      inset: 0;
+    }
+    .c-name {
+      position: absolute;
+      top: 330px;
+      font-family: "Black Han Sans", sans-serif;
+      font-size: 460px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+    .c-code {
+      position: absolute;
+      top: 250px;
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: 0.16em;
+    }
+    .c-left .c-name, .c-left .c-code { left: 150px; }
+    .c-right .c-name, .c-right .c-code { right: 150px; text-align: right; }
+    .c-yellow { background: #f5c518; color: #111111; }
+    .c-orange { background: #e8590c; color: #111111; }
+    .c-cream { background: #f4ead8; color: #111111; }
+    .c-ink { background: #111111; color: #f4efe2; }
+    #c7 { background: #111111; }
+    #c4-name { font-size: 330px; top: 380px; }
+    .c-name { top: 320px; }
+    .c-line {
+      position: absolute;
+      left: 150px;
+      font-family: "Black Han Sans", sans-serif;
+      font-size: 170px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #f4efe2;
+    }
+    #c7-l1 { top: 300px; }
+    #c7-l2 { top: 520px; }
+    .c-line span { display: inline-block; }
+    #c7-accent { color: #e8590c; }
+  </style>
+  <div data-hf-id="hf-o9nw" id="root" data-composition-id="cities" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-uhij" id="c1" class="c-shot c-yellow c-left clip" data-start="0" data-duration="0.75">
+      <div data-hf-id="hf-9l2k" class="c-code">KYOTO · JAPAN</div>
+      <div data-hf-id="hf-vskd" id="c1-name" class="c-name">교토</div>
+    </div>
+    <div data-hf-id="hf-vvur" id="c2" class="c-shot c-orange c-right clip" data-start="0.75" data-duration="0.75">
+      <div data-hf-id="hf-4qyf" class="c-code">QUEBEC · CANADA</div>
+      <div data-hf-id="hf-jtbb" id="c2-name" class="c-name">퀘벡</div>
+    </div>
+    <div data-hf-id="hf-ca3p" id="c3" class="c-shot c-cream c-left clip" data-start="1.5" data-duration="0.75">
+      <div data-hf-id="hf-o0lb" class="c-code">PRAHA · CZECHIA</div>
+      <div data-hf-id="hf-bg4x" id="c3-name" class="c-name">프라하</div>
+    </div>
+    <div data-hf-id="hf-h2k2" id="c4" class="c-shot c-ink c-right clip" data-start="2.25" data-duration="0.75">
+      <div data-hf-id="hf-qhm1" class="c-code">SALZBURG · AUSTRIA</div>
+      <div data-hf-id="hf-ep1y" id="c4-name" class="c-name">잘츠부르크</div>
+    </div>
+    <div data-hf-id="hf-fbqe" id="c5" class="c-shot c-orange c-left clip" data-start="3" data-duration="0.75">
+      <div data-hf-id="hf-n6e9" class="c-code">BANFF · CANADA</div>
+      <div data-hf-id="hf-jz8h" id="c5-name" class="c-name">밴프</div>
+    </div>
+    <div data-hf-id="hf-5brw" id="c6" class="c-shot c-yellow c-right clip" data-start="3.75" data-duration="0.75">
+      <div data-hf-id="hf-2yp0" class="c-code">NEW YORK · USA</div>
+      <div data-hf-id="hf-1u3n" id="c6-name" class="c-name">뉴욕</div>
+    </div>
+    <div data-hf-id="hf-s2pc" id="c7" class="c-shot clip" data-start="4.5" data-duration="3">
+      <div data-hf-id="hf-rfky" id="c7-l1" class="c-line"><span data-hf-id="hf-8su0" id="c7-accent">단풍이</span> <span data-hf-id="hf-hl9h">먼저</span></div>
+      <div data-hf-id="hf-nhgx" id="c7-l2" class="c-line"><span data-hf-id="hf-592m">마중</span> <span data-hf-id="hf-k6lr">나와요</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var tl = gsap.timeline({ paused: true });
+
+      // First city lands from the whip; the rest hard-cut in slightly large and settle.
+      tl.fromTo("#c1-name", { x: 1400, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, 0);
+      ["#c2-name", "#c3-name", "#c4-name", "#c5-name", "#c6-name"].forEach(function (sel, i) {
+        tl.fromTo(sel, { scale: 1.08 }, { scale: 1, duration: 0.3, ease: "expo.out" }, 0.75 * (i + 1));
+      });
+
+      // Words go from dim to cream, one after another, no movement.
+      tl.fromTo("#c7 .c-line span", { opacity: 0.12 }, { opacity: 1, duration: 0.12, ease: "power2.out", stagger: 0.16 }, 4.75);
+
+      window.__timelines["cities"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,6 @@
+.fonts-src/
+.hyperframes/
+.media/
+.thumbnails/
+.waveform-cache/
+node_modules/

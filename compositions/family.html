@@ -1,0 +1,121 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Black Han Sans";
+      src: url("assets/fonts/BlackHanSans-sub.woff2");
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .f-panel {
+      position: absolute;
+      inset: 0;
+    }
+    .f-inner {
+      position: absolute;
+      inset: 0;
+    }
+    .f-tag {
+      position: absolute;
+      left: 160px;
+      top: 150px;
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 0.14em;
+    }
+    .f-who {
+      position: absolute;
+      left: 150px;
+      top: 250px;
+      font-family: "Black Han Sans", sans-serif;
+      font-size: 150px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .f-what {
+      position: absolute;
+      left: 140px;
+      top: 440px;
+      font-family: "Black Han Sans", sans-serif;
+      font-size: 300px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .f-what span {
+      display: inline-block;
+    }
+    #f1 { background: #e8590c; color: #111111; }
+    #f2 { background: #f5c518; color: #111111; }
+    #f3 { background: #111111; color: #f4efe2; }
+    #f4 { background: #f4ead8; color: #111111; }
+    #f3 .f-what { color: #f5c518; }
+    #f4 .f-what { color: #e8590c; }
+    #f1-mask {
+      height: 330px;
+      overflow: hidden;
+    }
+    #f1-reel div {
+      height: 330px;
+      line-height: 330px;
+    }
+    #f3-what span {
+      transform-origin: 50% 0%;
+    }
+  </style>
+  <div data-hf-id="hf-wc44" id="root" data-composition-id="family" data-width="1920" data-height="1080" style="perspective: 1400px">
+    <div data-hf-id="hf-7dke" id="f1" class="f-panel clip" data-start="0" data-duration="2">
+      <div data-hf-id="hf-uhg2" class="f-tag">PASSENGER 01</div>
+      <div data-hf-id="hf-j3qn" class="f-who">엄마는</div>
+      <div data-hf-id="hf-hpz6" id="f1-mask" class="f-what" data-layout-allow-overflow>
+        <div data-hf-id="hf-11j3" id="f1-reel">
+          <div data-hf-id="hf-rfqv">셀카 한 장</div>
+          <div data-hf-id="hf-342c">필름 카메라</div>
+          <div data-hf-id="hf-iwud">단풍 사진</div>
+        </div>
+      </div>
+    </div>
+    <div data-hf-id="hf-v38z" id="f2" class="f-panel clip" data-start="2" data-duration="2">
+      <div data-hf-id="hf-uvr3" class="f-tag">PASSENGER 02</div>
+      <div data-hf-id="hf-rk93" class="f-who">아빠는</div>
+      <div data-hf-id="hf-ij99" class="f-what"><span data-hf-id="hf-3avn" id="f2-w1">지도</span> <span data-hf-id="hf-zxqr" id="f2-w2">담당</span></div>
+    </div>
+    <div data-hf-id="hf-d69c" id="f3" class="f-panel clip" data-start="4" data-duration="2">
+      <div data-hf-id="hf-va24" class="f-tag">PASSENGER 03</div>
+      <div data-hf-id="hf-1q95" class="f-who">나는</div>
+      <div data-hf-id="hf-h63l" id="f3-what" class="f-what"><span data-hf-id="hf-2has">창</span><span data-hf-id="hf-z94j">가</span> <span data-hf-id="hf-zjc3">자</span><span data-hf-id="hf-l2wn">리</span></div>
+    </div>
+    <div data-hf-id="hf-zwm1" id="f4" class="f-panel clip" data-start="6" data-duration="2">
+      <div data-hf-id="hf-qcfu" id="f4-inner" class="f-inner">
+        <div data-hf-id="hf-vod5" class="f-tag">PASSENGER 04</div>
+        <div data-hf-id="hf-xhg1" class="f-who">동생은</div>
+        <div data-hf-id="hf-rmkw" id="f4-what" class="f-what">첫 비행</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var tl = gsap.timeline({ paused: true });
+
+      // 엄마: slot reel rolls through options and lands on 단풍 사진.
+      tl.fromTo("#f1-reel", { y: 0, filter: "blur(0px)" }, { y: -330, filter: "blur(6px)", duration: 0.22, ease: "power2.in" }, 0.35);
+      tl.to("#f1-reel", { y: -660, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.57);
+
+      // 아빠: per word blur-in.
+      tl.fromTo("#f2-w1", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, 2.3);
+      tl.fromTo("#f2-w2", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, 2.42);
+
+      // 나: each letter falls like a flap from its top hinge.
+      tl.fromTo("#f3-what span", { rotationX: -95, opacity: 0 }, { rotationX: 0, opacity: 1, duration: 0.28, ease: "power2.in", stagger: 0.07 }, 4.25);
+
+      // 동생: whole line sharpens in, then the panel whips left into the cities.
+      tl.fromTo("#f4-what", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 6.3);
+      tl.fromTo("#f4-inner", { x: 0, filter: "blur(0px)" }, { x: -1500, filter: "blur(14px)", duration: 0.32, ease: "power3.in" }, 7.62);
+
+      window.__timelines["family"] = tl;
+    })();
+  </script>
+</template>

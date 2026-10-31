@@ -1,0 +1,88 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Black Han Sans";
+      src: url("assets/fonts/BlackHanSans-sub.woff2");
+    }
+    @font-face {
+      font-family: "Noto Sans KR";
+      src: url("assets/fonts/NotoSansKR-sub.woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    #m1 { background: #f4ead8; }
+    #m2 { background: #f5c518; }
+    .m-shot { position: absolute; inset: 0; }
+    #m1-word {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 250px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-family: "Black Han Sans", sans-serif;
+      font-size: 420px;
+      line-height: 1;
+      color: #e8590c;
+    }
+    #m1-word span { display: inline-block; }
+    #m1-sub {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 760px;
+      text-align: center;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      color: #111111;
+    }
+    #m2-line {
+      position: absolute;
+      left: 150px;
+      top: 390px;
+      font-family: "Black Han Sans", sans-serif;
+      font-size: 280px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #111111;
+      white-space: nowrap;
+    }
+    #m2-line span { display: inline-block; }
+  </style>
+  <div data-hf-id="hf-iaxw" id="root" data-composition-id="moments" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-vl5c" id="m1" class="m-shot clip" data-start="0" data-duration="2.4">
+      <div data-hf-id="hf-zdrr" id="m1-word" data-layout-allow-overflow><span data-hf-id="hf-i236" id="m1-a">바</span><span data-hf-id="hf-wk73" id="m1-b">스</span><span data-hf-id="hf-ymzj" id="m1-c">락</span></div>
+      <div data-hf-id="hf-uxqw" id="m1-sub">낙엽 밟는 소리까지 여행</div>
+    </div>
+    <div data-hf-id="hf-hwl8" id="m2" class="m-shot clip" data-start="2.4" data-duration="2.1">
+      <div data-hf-id="hf-e3qr" id="m2-line"><span data-hf-id="hf-ome1">손은</span> <span data-hf-id="hf-e8dg">꼭</span> <span data-hf-id="hf-eiao">잡고</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var tl = gsap.timeline({ paused: true });
+
+      // Letters drift down like leaves and settle at a slight tilt.
+      var leaves = [
+        { sel: "#m1-a", x: -120, r0: -50, r1: -6, at: 0.05 },
+        { sel: "#m1-b", x: 90, r0: 40, r1: 4, at: 0.18 },
+        { sel: "#m1-c", x: -60, r0: -35, r1: -3, at: 0.31 },
+      ];
+      leaves.forEach(function (l) {
+        tl.fromTo(l.sel, { y: -760, x: l.x, rotation: l.r0 }, { y: 0, x: 0, rotation: l.r1, duration: 0.75, ease: "back.out(1.6)" }, l.at);
+      });
+      tl.fromTo("#m1-sub", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.95);
+
+      // Words land one by one, slightly large, then settle.
+      tl.fromTo("#m2-line span", { opacity: 0, scale: 1.25, filter: "blur(8px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.2, ease: "expo.out", stagger: 0.12 }, 2.5);
+
+      window.__timelines["moments"] = tl;
+    })();
+  </script>
+</template>

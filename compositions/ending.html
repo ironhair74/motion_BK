@@ -1,0 +1,219 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Black Han Sans";
+      src: url("assets/fonts/BlackHanSans-sub.woff2");
+    }
+    @font-face {
+      font-family: "Noto Sans KR";
+      src: url("assets/fonts/NotoSansKR-sub.woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--color-board, #111111);
+      overflow: hidden;
+      perspective: 1800px;
+    }
+    #e-header {
+      position: absolute;
+      left: 150px;
+      right: 150px;
+      top: 96px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 18px;
+      border-bottom: 3px solid #2a2a2c;
+      color: #f4efe2;
+    }
+    #e-header .en {
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-size: 34px;
+      letter-spacing: 0.12em;
+    }
+    #e-header .ko {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 900;
+      font-size: 34px;
+    }
+    #e-label {
+      position: absolute;
+      left: 336px;
+      top: 222px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: #bdb6a6;
+    }
+    #e-board {
+      position: absolute;
+      left: 336px;
+      top: 290px;
+      display: flex;
+      gap: 16px;
+    }
+    #e-line {
+      position: absolute;
+      left: 336px;
+      top: 780px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 900;
+      font-size: 64px;
+      color: #f4efe2;
+    }
+    #e-line span { display: inline-block; }
+    .fl-cell {
+      position: relative;
+      flex: 0 0 auto;
+      perspective: 900px;
+      border-radius: 10px;
+      background: #0c0c0e;
+    }
+    .fl-face {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      background: #1b1b1d;
+    }
+    .fl-top, .fl-leaf-a { top: 0; border-radius: 10px 10px 0 0; }
+    .fl-bot, .fl-leaf-b { top: 50%; border-radius: 0 0 10px 10px; background: #161618; }
+    .fl-leaf-a { transform-origin: 50% 100%; z-index: 3; backface-visibility: hidden; }
+    .fl-leaf-b { transform-origin: 50% 0%; z-index: 3; backface-visibility: hidden; }
+    .fl-glyph {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-family: "Black Han Sans", sans-serif;
+      white-space: pre;
+    }
+    .fl-seam {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 3px;
+      margin-top: -1.5px;
+      background: #050506;
+      z-index: 4;
+    }
+  </style>
+  <div data-hf-id="hf-8j3s" id="root" data-composition-id="ending" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-8m6k" id="e-header"><span data-hf-id="hf-jw7x" class="en">DEPARTURES</span><span data-hf-id="hf-nicl" class="ko">출발 안내</span></div>
+    <div data-hf-id="hf-d34y" id="e-label">탑승 상태</div>
+    <div data-hf-id="hf-6xun" id="e-board" class="clip" data-start="0" data-duration="4" data-layout-allow-overflow></div>
+    <div data-hf-id="hf-uf4p" id="e-line"><span data-hf-id="hf-z0lh">이번</span> <span data-hf-id="hf-ehmj">가을,</span> <span data-hf-id="hf-vxvh">우리</span> <span data-hf-id="hf-qi06">가족</span> <span data-hf-id="hf-a2l6">여행</span></div>
+  </div>
+  <script>
+    (function () {
+      // Hangul drum: every cell walks through these before landing on its target.
+      var POOL = "여행출발도착비행기단풍하늘구름바다공항탑승가족오늘";
+
+      function flapRows(rows) {
+        var cells = [];
+        rows.forEach(function (r, ri) {
+          Array.from(r.text).forEach(function (ch, ci) {
+            var cell = document.createElement("div");
+            cell.className = "fl-cell";
+            cell.style.width = r.w + "px";
+            cell.style.height = r.h + "px";
+            cell.setAttribute("data-layout-allow-overlap", "");
+            cell.setAttribute("data-layout-allow-occlusion", "");
+            cell.setAttribute("data-layout-allow-overflow", "");
+            var faces = {};
+            ["fl-top", "fl-bot", "fl-leaf-a", "fl-leaf-b"].forEach(function (cls) {
+              var f = document.createElement("div");
+              f.className = "fl-face " + cls;
+              var g = document.createElement("span");
+              g.className = "fl-glyph";
+              g.style.height = r.h + "px";
+              g.style.lineHeight = r.h * 1.04 + "px";
+              g.style.fontSize = r.fs + "px";
+              g.style.color = r.color;
+              g.style.top = cls === "fl-bot" || cls === "fl-leaf-b" ? -r.h / 2 + "px" : "0px";
+              f.setAttribute("data-layout-allow-occlusion", "");
+              g.setAttribute("data-layout-allow-occlusion", "");
+              f.appendChild(g);
+              cell.appendChild(f);
+              faces[cls] = f;
+            });
+            var seam = document.createElement("div");
+            seam.className = "fl-seam";
+            cell.appendChild(seam);
+            r.el.appendChild(cell);
+            var drum = [" "];
+            var n = r.steps + (ci % 3);
+            for (var k = 0; k < n - 1; k++) drum.push(POOL.charAt((ri * 31 + ci * 17 + k * 7) % POOL.length));
+            drum.push(ch);
+            cells.push({ drum: drum, t0: r.t0 + ci * r.stagger, flip: r.flip, f: faces });
+          });
+        });
+
+        function leaf(face, ch, ang, shade) {
+          face.firstChild.textContent = ch;
+          face.style.opacity = "1";
+          face.style.transform = "rotateX(" + ang.toFixed(2) + "deg)";
+          face.style.filter = "brightness(" + shade + ")";
+        }
+        function clear(face) {
+          face.style.opacity = "0";
+          face.style.transform = "";
+          face.style.filter = "";
+          face.firstChild.textContent = "";
+        }
+        return function paint(t) {
+          cells.forEach(function (c) {
+            var steps = c.drum.length - 1;
+            var raw = t <= c.t0 ? 0 : (t - c.t0) / c.flip;
+            var count = Math.floor(raw);
+            var p = raw - count;
+            if (count >= steps) { count = steps; p = 0; }
+            var out = c.drum[count];
+            var inc = c.drum[Math.min(count + 1, steps)];
+            if (!(count < steps && p > 0)) {
+              c.f["fl-top"].firstChild.textContent = out;
+              c.f["fl-bot"].firstChild.textContent = out;
+              clear(c.f["fl-leaf-a"]);
+              clear(c.f["fl-leaf-b"]);
+              return;
+            }
+            c.f["fl-top"].firstChild.textContent = inc;
+            c.f["fl-bot"].firstChild.textContent = out;
+            var theta = 180 * p * p;
+            var shade = (1 - 0.5 * Math.sin((theta * Math.PI) / 180)).toFixed(3);
+            if (theta < 90) {
+              leaf(c.f["fl-leaf-a"], out, -theta, shade);
+              clear(c.f["fl-leaf-b"]);
+            } else {
+              clear(c.f["fl-leaf-a"]);
+              leaf(c.f["fl-leaf-b"], inc, 180 - theta, shade);
+            }
+          });
+        };
+      }
+
+      var paint = flapRows([
+        { el: document.getElementById("e-board"), text: "탑승완료", t0: 0.15, flip: 0.07, steps: 10, stagger: 0.1, w: 300, h: 420, fs: 290, color: "#F5C518" },
+      ]);
+
+      var clock = 0;
+      var driver = {};
+      Object.defineProperty(driver, "t", {
+        get: function () { return clock; },
+        set: function (v) { clock = v; paint(v); },
+      });
+
+      var tl = gsap.timeline({ paused: true });
+      tl.to(driver, { t: 4, duration: 4, ease: "none" }, 0);
+      tl.fromTo("#e-line span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out", stagger: 0.09 }, 1.55);
+      paint(0);
+      window.__timelines["ending"] = tl;
+    })();
+  </script>
+</template>
